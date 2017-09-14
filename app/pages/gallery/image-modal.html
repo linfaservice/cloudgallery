@@ -1,0 +1,32 @@
+
+<StackLayout id="main"> 
+
+    <Image 
+        [src]="'data:image/jpg;base64,'+item.src"
+        (tap)="close()"> 
+    </Image>
+    <DockLayout stretchLast="true">
+        <StackLayout dock="right" *ngIf="!item.loaded" orientation="horizontal">
+            <Label class="loading1"></Label>
+            <Label class="loading2"></Label>
+            <Label class="loading3"></Label>
+        </StackLayout>
+        <StackLayout dock="right" *ngIf="item.loaded" orientation="horizontal">
+            <Label 
+                class="fa btn-share"
+                text="{{'fa-share-alt' | fonticon}}"  
+                (tap)="onTap(item)"
+                (touch)="util.onTouchEffect($event)">
+            </Label>
+        </StackLayout>        
+        <Label dock="left" class="label" [text]="item.title"></Label>
+    </DockLayout>
+
+    <!--Button #btn_close
+        class="button"
+        id="close" text="Chiudi"
+        (tap)="close()"
+        (touch)="onTouchEffect($event)">
+    </Button-->    
+
+</StackLayout>

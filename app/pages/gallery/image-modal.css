@@ -1,0 +1,58 @@
+#main {
+    background-color: #000;
+    vertical-align: middle;
+}
+
+.label {
+    color: #ffffff;
+    padding: 10;
+}
+
+.loadingtext {
+    padding: 10;
+    animation-name: pulse;
+    animation-duration: 2s;
+    color:#aaa; 
+}
+
+.loading1 {
+    width:8;
+    height:8;
+    margin-right:5;
+    background-color:#eee;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.loading2 {
+    width:8;
+    height:8;
+    margin-right:5;
+    background-color:#eee;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 500ms;
+}
+.loading3 {
+    width:8;
+    height:8;
+    margin-right:10;
+    background-color:#eee;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+
+.btn-share {
+    width:32;
+    height:32;
+    margin:3;
+    margin-right: 10;
+    padding:8;
+    color: #555;
+    border-width: 1;
+    background-color: #ccc;
+    border-radius: 50;
+}

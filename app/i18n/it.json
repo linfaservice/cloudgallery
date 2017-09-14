@@ -1,0 +1,21 @@
+{
+    "Loading albums...": "Recupero album in corso...",
+    "Loading images...": "Recupero immagini in corso...",
+    "Loading image...": "Caricamento immagine in corso...",
+    "Error loading. Please retry": "Si è verificato un problema durante il caricamento. Riprovare",
+    "Share": "Condividi",
+    "Collections": "Album",
+    "Files": "Immagini",
+    "Error connecting. Please check parameters": "Impossibile stabilire la connessione. Verificare i parametri",
+    "Error loading. Please exit and reconfigure": "Errore di connessione. Eseguire il logout e reinserire i parametri di configurazione",
+    "Exit?": "Uscire?",
+    "Are you sure you want to exit?": "Sei sicuro di voler uscire dall'app?",
+    "Yes": "Si",
+    "No": "No",
+    "Nextcloud server address": "Indirizzo server Nextcloud",
+    "Username": "Username",
+    "Password": "Password",
+    "Main folder": "Cartella principale",
+    "Save": "Salva",
+    "Photo": "Foto"
+}

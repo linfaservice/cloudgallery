@@ -1,0 +1,70 @@
+<ActionBar title="">
+    <DockLayout stretchLast="true"> 
+        <Label dock="left"
+            class="fa actionbar-icon" *ngIf="cache.history.length==1"
+            text=" " >
+        </Label>         
+        <Label dock="left"
+            class="fa actionbar-icon actionbar-icon-left" *ngIf="cache.history.length>1"
+            text="{{'fa-angle-left' | fonticon}}" 
+            (tap)="back()"
+            (touch)="util.onTouchEffect($event)" >
+        </Label> 
+        <Label dock="right"
+            class="fa actionbar-icon actionbar-icon-right"
+            text="{{'fa-sign-out' | fonticon}}" 
+            (tap)="exit()"
+            (touch)="util.onTouchEffect($event)" >
+        </Label>     
+        <Label class="header" [text]="cache.currentAlbum.title" ></Label> 
+    </DockLayout>
+</ActionBar>  
+ 
+<StackLayout>
+
+    <Progress [value]="progressVal" maxValue="100" class="progressbar"></Progress>
+
+    <DockLayout class="main animation" stretchLastChild="true">
+
+        <DockLayout dock="bottom" class="footer" stretchLastChild="true">
+            <Label dock="right" [text]="version" class="footerversion"></Label>
+            <Label dock="left" [text]="footer" class="footertext"></Label>            
+        </DockLayout>
+
+        <GridLayout tkExampleTitle tkToggleNavButton dock="top">
+            <RadListView id="galleryView" [items]="current" class="gallery-container">
+                <ng-template tkListItemTemplate let-item="item">
+                    <StackLayout orientation="vertical">
+                        <StackLayout *ngIf="item!=null && item.isAlbum" 
+                            orientation="vertical" 
+                            (tap)="onTapFolder(item)">
+                            <CardView margin="3" elevation="20" radius="0">
+                                <StackLayout class="folder">
+                                    <Label [text]="item.title" textWrap="true"></Label>
+                                </StackLayout> 
+                            </CardView>                            
+                        </StackLayout>
+                        <StackLayout *ngIf="item!=null && !item.isAlbum" 
+                            orientation="vertical" 
+                            class="element">
+                            <Image 
+                                [src]="'data:image/jpg;base64,'+item.src" 
+                                (tap)="onTapImage(item)"></Image>
+                        </StackLayout>   
+                    </StackLayout>             
+                </ng-template>                  
+                <ng-template tkListViewFooter>
+                    <Label text=""></Label>
+                </ng-template>        
+                <ListViewStaggeredLayout tkListViewLayout 
+                    scrollDirection="Vertical" 
+                    spanCount="3">
+                </ListViewStaggeredLayout>                   
+            </RadListView>
+        </GridLayout>
+
+    </DockLayout>
+
+</StackLayout>
+
+ 

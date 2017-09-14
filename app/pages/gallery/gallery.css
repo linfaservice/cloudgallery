@@ -1,0 +1,66 @@
+.main {
+    padding: 0;
+    margin:0;
+}
+
+.actionbar-icon {
+    font-size: 25;
+    vertical-align: middle;
+    color: #abd;
+    background-color: transparent;
+    margin:0;
+}
+.actionbar-icon-left {
+    padding-left: 0;
+}
+.actionbar-icon-right {
+    padding-right: 10; 
+}
+
+.footer {
+    background-color: #000;
+}
+
+.footertext {
+    padding: 5;
+    text-align: left;
+    color: #aaa;    
+}
+
+.footerversion {
+    padding: 5;
+    text-align: left;
+    font-size: 10;
+    vertical-align: bottom;
+    color: #333;      
+}
+
+.gallery-container {
+    margin: 5;
+    vertical-align: top;
+}
+
+.folder {
+    background-color: #F4D07A;
+    height: 120;
+    padding: 5;  
+    border-color: #fff; /*#aaa;*/
+    border-width: 1; 
+    text-align: center;    
+    vertical-align: middle; 
+}
+
+.element {
+    border-width: 1;
+    border-color: #ffffff; 
+    animation-name: fadeIn;
+    animation-duration: 1s;    
+    vertical-align: top;
+    text-align: left;
+}
+
+.progressbar {
+    background-color: #ffffff;
+    color: #1A659E;
+    margin-top:-5;
+}

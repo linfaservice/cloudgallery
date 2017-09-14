@@ -1,0 +1,33 @@
+
+RadSideDrawer {  
+    padding: 0; 
+    margin: 0;
+}
+
+.menu-layout {
+    background-color: #FFFFFF;
+    opacity:0.8;
+}
+
+.menu-list {
+    height:100%;
+}
+.menu-item {
+    padding: 13;
+    font-size: 18;
+    color: #005C65;
+}
+
+.menu-item-odd {}
+.menu-item-even {}
+
+.menu-item-icon {
+	width: 32;
+    font-size: 32;
+    color: #005C65;
+	margin-right: 20;
+}
+
+.menu-item-label {}
+
+.main-content {}

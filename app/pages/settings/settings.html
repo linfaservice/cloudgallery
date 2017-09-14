@@ -1,0 +1,75 @@
+<DockLayout id="main">
+
+    <StackLayout dock="bottom">
+        <Button
+            [text]="'Save' | translate" 
+            class="submit-button" 
+            (tap)="save()"
+            (touch)="util.onTouchEffect($event)">
+        </Button>  
+
+        <!--Label 
+            class="link"
+            textWrap="true"
+            text="Non hai ancora un tuo cloud personale?  Clicca qui per ottenere SPAZIO ILLIMITATO su CloudGallery"
+            (tap)="link()" >
+        </Label--> 
+    </StackLayout>
+
+    <ScrollView dock="top">
+        <StackLayout>
+
+            <Image 
+                class="logo"
+                src="~/img/logo.png">
+            </Image>
+            <Label 
+                class="label"
+                [text]="'Nextcloud server address' | translate" >
+            </Label>
+            <TextField
+                class="field"
+                style="color:#fff"
+                [(ngModel)]="host"
+                keyboardType="url"
+                hint="https://yourcloud">
+            </TextField>
+
+            <Label 
+                class="label"
+                [text]="'Username' | translate" >
+            </Label>
+            <TextField
+                class="field"
+                style="color:#fff"
+                hint="username" 
+                [(ngModel)]="username">
+            </TextField>           
+                      
+            <Label 
+                class="label"
+                [text]="'Password' | translate" >
+            </Label>
+            <TextField
+                class="field"
+                style="color:#fff"
+                hint="password" 
+                secure="true" 
+                [(ngModel)]="password">
+            </TextField>             
+
+            <Label 
+                class="label"
+                [text]="'Main folder' | translate" >
+            </Label>
+            <TextField
+                class="field"
+                style="color:#fff"
+                [hint]="'Photo' | translate" 
+                [(ngModel)]="rootdir">
+            </TextField>                     
+
+        </StackLayout>
+    </ScrollView>
+   
+</DockLayout>

@@ -1,0 +1,36 @@
+<ActionBar title="Cloud Gallery" (tap)="home()">
+	<NavigationButton 
+		icon="res://ic_menu" 
+		(tap)="toggleDrawer()"
+		(touch)="util.onTouchEffect($event)">
+	</NavigationButton>
+	<!--ActionItem icon="res://ic_menu" (tap)="info()"></ActionItem-->
+</ActionBar> 
+
+<RadSideDrawer #drawer>  
+		<StackLayout tkDrawerContent class="menu-layout">
+			<ListView class="menu-list" [items]="pages" (itemTap)="onMenuTapped($event)">
+				<ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
+					<StackLayout class="menu-item" orientation="horizontal"
+						[class.odd]="menu-item-odd" 
+						[class.even]="menu-item-even">
+							<!--Image class="menu-item-icon" [src]="item.icon"></Image-->
+							<Label class="fa menu-item-icon" [text]="item.icon"></Label>
+							<Label class="fa menu-item-label" [text]="item.name" verticalAlignment="middle"></Label>
+					</StackLayout>
+				</ng-template>			
+			</ListView>
+		</StackLayout>
+		<GridLayout tkMainContent 
+			rows="*, auto" columns="*"
+			class="main-content"
+			width="100%"
+        	height="100%">
+				<router-outlet row="0" name="baseoutlet"></router-outlet>
+				<StackLayout row="1">
+					<BottomNav row="1"></BottomNav>
+				</StackLayout>
+		</GridLayout>	
+</RadSideDrawer>  
+
+ 

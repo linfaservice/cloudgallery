@@ -1,0 +1,35 @@
+@import "~/css/animate.css";
+
+ActionBar {
+  background-color: #004E89;
+  color: #FFFFFF;
+  font-family: "Roboto", roboto-regular;
+}
+
+.fa {
+  font-family: FontAwesome, fontawesome-webfont;
+}
+
+.animation {
+        animation-name: fadeInUp;
+        animation-duration: 1s;
+} 
+
+.header {
+        width: 100%;
+        font-size: 20;
+        font-family: "Roboto Th", roboto-thin;
+        background-color: #004E89;
+        color: #FFFFFF;
+        padding: 15;
+        text-align: left;
+}
+
+.submit-button {
+  font-family: "Roboto", roboto-regular; 
+  background-color: #8BC34A;
+  color: #FFFFFF;
+  margin-top: 20;
+  min-height: 50;
+  border-radius: 7;
+}
