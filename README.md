@@ -25,7 +25,13 @@ $ git clone https://github.com/linfaservice/cloudgallery.git
 $ cd cloudgallery
 ```
 
-From there you can use the `run` command to run Cloud Gallery:
+From there you can use the `platform add` command to prepare Android or iOS platform:
+
+```
+$ tns platform add android
+```
+
+and the `run` command to run Cloud Gallery:
 
 ```
 $ tns run android
