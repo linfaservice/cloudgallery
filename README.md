@@ -25,13 +25,7 @@ $ git clone https://github.com/linfaservice/CloudGallery.git
 $ cd CloudGallery
 ```
 
-From there you can use the `run` command to run Cloud Gallery on iOS:
-
-```
-$ tns run ios
-```
-
-And the same command to run Cloud Gallery on Android:
+From there you can use the `run` command to run Cloud Gallery:
 
 ```
 $ tns run android
