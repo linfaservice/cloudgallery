@@ -1,6 +1,6 @@
 # Cloud Gallery
-Nativescript photo gallery app for Nextcloud.
-Cloud Gallery is the app that allows you to scroll through and review all the photos stored on your Nextcloud account without having to download them first. You can review your favorite moments and share them quickly and easily, without taking up space on your smartphone.
+<p>Nativescript photo gallery app for Nextcloud.</p>
+<p>Cloud Gallery is the app that allows you to scroll through and review all the photos stored on your Nextcloud account without having to download them first. You can review your favorite moments and share them quickly and easily, without taking up space on your smartphone.</p>
 
 [<img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" 
       alt="Download from Google Play" 
