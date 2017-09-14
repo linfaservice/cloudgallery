@@ -22,7 +22,7 @@ This app is built with the NativeScript CLI. Once you have the [CLI installed](h
 
 ```
 $ git clone https://github.com/linfaservice/cloudgallery.git
-$ cd CloudGallery
+$ cd cloudgallery
 ```
 
 From there you can use the `run` command to run Cloud Gallery:
