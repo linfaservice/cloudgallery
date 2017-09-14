@@ -21,7 +21,7 @@
 This app is built with the NativeScript CLI. Once you have the [CLI installed](https://docs.nativescript.org/start/quick-setup), start by cloning the repo:
 
 ```
-$ git clone https://github.com/linfaservice/CloudGallery.git
+$ git clone https://github.com/linfaservice/Cloud-Gallery.git
 $ cd CloudGallery
 ```
 
