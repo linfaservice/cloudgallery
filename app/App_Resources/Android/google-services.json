@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "470536892335",
-    "firebase_url": "https://cloudgallery-184fd.firebaseio.com",
-    "project_id": "cloudgallery-184fd",
-    "storage_bucket": "cloudgallery-184fd.appspot.com"
+    "project_number": "",
+    "firebase_url": "",
+    "project_id": "",
+    "storage_bucket": ""
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:470536892335:android:49b2376aed4e2817",
+        "mobilesdk_app_id": "",
         "android_client_info": {
-          "package_name": "it.linfaservice.cloudgallery"
+          "package_name": ""
         }
       },
       "oauth_client": [
         {
-          "client_id": "470536892335-s50dic39mahbo9id94dr7h4vq0a5bk15.apps.googleusercontent.com",
+          "client_id": "",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCVOFn2eva4VYydoS-JBfTjOQ9RuXzV3-k"
+          "current_key": ""
         }
       ],
       "services": {
