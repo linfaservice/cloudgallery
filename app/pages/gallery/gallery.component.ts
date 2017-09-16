@@ -93,6 +93,7 @@ export class GalleryComponent {
           "Authorization": "Basic "+Base64.encode(this.username+':'+this.password)
         }            
 
+        this.cache.images = new Array<GalleryItem>();
         this.home();
       });
     }
@@ -176,7 +177,8 @@ export class GalleryComponent {
       // try from cache first
       this.util.log("Get Album Cache", this.cache.images[this.cache.currentAlbum.nodeid]);
       if(this.cache.images[this.cache.currentAlbum.nodeid].loaded) {
-
+        
+        this.util.log("Cache Found!", "Retrieving from cache");
         for(let a in this.cache.images[this.cache.currentAlbum.nodeid].items) {
           let item = this.cache.images[this.cache.currentAlbum.nodeid].items[a];
           this.util.log("Cache album added", item);
@@ -192,13 +194,32 @@ export class GalleryComponent {
         }, 800);
 
       } else {
+
+        this.util.log("Cache Not Found :(", "Retrieving from cloud...");
       
         Http.request({
             url: url,
             method: "GET",
             headers: this.headers
         }).then((response:any)=> {
-            let data = response.content.toJSON();
+            let data = null;
+
+            try {
+              data = response.content.toJSON();
+            } catch(e) {
+              Toast.makeText(this.translate.instant("Error loading. Please retry")).show();
+              this.util.log("Error", e);
+              this.loader.hideLoader();
+              return;              
+            }
+
+            if(data==null) {
+              Toast.makeText(this.translate.instant("Error loading. Please retry")).show();
+              this.util.log("Error", "Data null");
+              this.loader.hideLoader();
+              return;   
+            }
+
             this.util.log("response to ", path+"("+nodeid+"), current album:" + this.cache.currentAlbum.nodeid);
 
             let albums = data.albums;  

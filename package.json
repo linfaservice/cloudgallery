@@ -41,7 +41,7 @@
     "ng2-translate": "^5.0.0",
     "reflect-metadata": "~0.1.8",
     "rxjs": "~5.2.0",
-    "tns-core-modules": "~3.1.0",
+    "tns-core-modules": "^3.2.0",
     "typescript": "^2.4.2",
     "utf8": "^2.1.2",
     "zone.js": "0.8.2"
