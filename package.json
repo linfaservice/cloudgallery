@@ -2,7 +2,7 @@
   "description": "CloudGallery",
   "license": "",
   "readme": "CloudGallery",
-  "repository": "<fill-your-repository-here>",
+  "repository": "https://github.com/linfaservice/cloudgallery",
   "nativescript": {
     "id": "it.linfaservice.cloudgallery",
     "tns-android": {
