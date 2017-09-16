@@ -61,4 +61,4 @@ keystore/
 res/
 build-release.bat
 platforms/
-
+app/App_Resources/Android/google-services.json
