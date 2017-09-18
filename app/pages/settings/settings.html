@@ -8,12 +8,12 @@
             (touch)="util.onTouchEffect($event)">
         </Button>  
 
-        <!--Label 
+        <Label 
             class="link"
             textWrap="true"
-            text="Non hai ancora un tuo cloud personale?  Clicca qui per ottenere SPAZIO ILLIMITATO su CloudGallery"
+            [text]="'Do you need a Nextcloud account? Click here for illimitate space for Cloud Gallery' | translate"
             (tap)="link()" >
-        </Label--> 
+        </Label> 
     </StackLayout>
 
     <ScrollView dock="top">

@@ -75,7 +75,7 @@ export class SettingsComponent {
     } 
 
     private link() {
-      util.openUrl("https://www.linfaservice.it/cloudgallery");
+      util.openUrl("https://www.operweb.com/nextcloud-gallery/");
     }
 
 }
