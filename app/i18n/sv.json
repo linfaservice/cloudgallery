@@ -1,0 +1,22 @@
+{
+    "Loading albums...": "Laddar album...",
+    "Loading images...": "Laddar bilder...",
+    "Loading image...": "Laddar bild...",
+    "Error loading. Please retry": "Fel vid inläsning. Var god försök",
+    "Share": "Dela",
+    "Collections": "Samlingar",
+    "Files": "Bilder",
+    "Error connecting. Please check parameters": "Fel vid anslutning. Vänligen kolla parametrarna",
+    "Error loading. Please exit and reconfigure": "Fel vid inläsning. Var god avsluta och omkonfigurera",
+    "Exit?": "Avsluta?",
+    "Are you sure you want to exit?": "Är du säker att du vill avsluta?",
+    "Yes": "Ja",
+    "No": "Nej",
+    "Nextcloud server address": "Nextcloud serveradress",
+    "Username": "Användarnamn",
+    "Password": "Lösenord",
+    "Main folder": "Huvudmapp",
+    "Save": "Spara",
+    "Photo": "Bild",
+    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery"
+}

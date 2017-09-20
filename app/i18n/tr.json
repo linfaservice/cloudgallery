@@ -1,0 +1,22 @@
+{
+    "Loading albums...": "Albümler yükleniyor...",
+    "Loading images...": "Görseller yükleniyor...",
+    "Loading image...": "Görsel yükleniyor...",
+    "Error loading. Please retry": "Yükleme sırasında sorun çıktı. Lütfen yeniden deneyin",
+    "Share": "Paylaş",
+    "Collections": "Derlemeler",
+    "Files": "Görseller",
+    "Error connecting. Please check parameters": "Bağlantı kurulurken sorun çıktı. Lütfen parametreleri denetleyin",
+    "Error loading. Please exit and reconfigure": "Yükleme sırasında sorun çıktı. Lütfen çıkıp yeniden yapılandırın",
+    "Exit?": "Çıkılsın mı?",
+    "Are you sure you want to exit?": "Çıkmak istediğinize emin misiniz?",
+    "Yes": "Evet",
+    "No": "Hayır",
+    "Nextcloud server address": "Nextcloud sunucu adresi",
+    "Username": "Kullanıcı adı",
+    "Password": "Parola",
+    "Main folder": "Ana klasör",
+    "Save": "Kaydet",
+    "Photo": "Fotoğraf",
+    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery"
+}

@@ -1,0 +1,22 @@
+{
+    "Loading albums...": "Hleð inn albúmum...",
+    "Loading images...": "Hleð inn myndum...",
+    "Loading image...": "Hleð inn mynd...",
+    "Error loading. Please retry": "Villa við hleðslu. Prófaðu aftur",
+    "Share": "Deila",
+    "Collections": "Söfn",
+    "Files": "Myndir",
+    "Error connecting. Please check parameters": "Villa við tengingu. Skoðaðu stillingarnar",
+    "Error loading. Please exit and reconfigure": "Villa við hleðslu. Farðu út og skoðaðu stillingar",
+    "Exit?": "Fara út?",
+    "Are you sure you want to exit?": "Ertu viss um að þú viljir hætta?",
+    "Yes": "Já",
+    "No": "Nei",
+    "Nextcloud server address": "Vistfang Nextcloud-þjóns",
+    "Username": "Notandanafn",
+    "Password": "Lykilorð",
+    "Main folder": "Aðalmappa",
+    "Save": "Vista",
+    "Photo": "Ljósmynd",
+    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery"
+}

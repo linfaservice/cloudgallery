@@ -1,0 +1,22 @@
+{
+    "Loading albums...": "Įkeliami albumai...",
+    "Loading images...": "Įkeliami paveikslai...",
+    "Loading image...": "Įkeliamas paveikslas...",
+    "Error loading. Please retry": "Klaida, įkeliant. Bandykite dar kartą",
+    "Share": "Share",
+    "Collections": "Kolekcijos",
+    "Files": "Paveikslai",
+    "Error connecting. Please check parameters": "Klaida, jungiantis. Patikrinkite parametrus",
+    "Error loading. Please exit and reconfigure": "Klaida, įkeliant. Išeikite ir sukonfigūruokite iš naujo",
+    "Exit?": "Išeiti?",
+    "Are you sure you want to exit?": "Ar tikrai norite išeiti?",
+    "Yes": "Taip",
+    "No": "Ne",
+    "Nextcloud server address": "Nextcloud serverio adresas",
+    "Username": "Naudotojo vardas",
+    "Password": "Slaptažodis",
+    "Main folder": "Pagrindinis aplankas",
+    "Save": "Įrašyti",
+    "Photo": "Nuotrauka",
+    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery"
+}

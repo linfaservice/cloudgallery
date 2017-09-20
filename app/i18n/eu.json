@@ -1,0 +1,22 @@
+{
+    "Loading albums...": "Albumak kargatzen...",
+    "Loading images...": "Irudiak kargatzen...",
+    "Loading image...": "Irudia kargatzen...",
+    "Error loading. Please retry": "Errorea kargatzen. Mesedez, saiatu berriz",
+    "Share": "Partekatu",
+    "Collections": "Bildumak",
+    "Files": "Irudiak",
+    "Error connecting. Please check parameters": "Errorea konektatzen. Mesedez, egiaztatu parametroak",
+    "Error loading. Please exit and reconfigure": "Errorea kargatzerakoan. Mesedez, itxi eta birkonfiguratu",
+    "Exit?": "Irten?",
+    "Are you sure you want to exit?": "Ziur zaude irten nahi duzula?",
+    "Yes": "Bai",
+    "No": "Ez",
+    "Nextcloud server address": "Nextcloud zerbitzariaren helbidea",
+    "Username": "Erabiltzaile izena",
+    "Password": "Pasahitza",
+    "Main folder": "Karpeta nagusia",
+    "Save": "Gorde",
+    "Photo": "Argazkia",
+    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery"
+}

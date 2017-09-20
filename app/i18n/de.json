@@ -1,0 +1,22 @@
+{
+    "Loading albums...": "Lade Alben...",
+    "Loading images...": "Lade Bilder...",
+    "Loading image...": "Lade Bild...",
+    "Error loading. Please retry": "Fehler beim Laden. Bitte erneut versuchen",
+    "Share": "Teilen",
+    "Collections": "Sammlungen",
+    "Files": "Bilder",
+    "Error connecting. Please check parameters": "Fehler beim Verbinden. Bitte prüfe die Eingaben",
+    "Error loading. Please exit and reconfigure": "Fehler beim Laden. Bitte schließen und erneut konfigurieren",
+    "Exit?": "Schließen?",
+    "Are you sure you want to exit?": "Bist du sicher, dass du die Anwendung schließen willst?",
+    "Yes": "Ja",
+    "No": "Nein",
+    "Nextcloud server address": "Nextcloud Serveradresse",
+    "Username": "Benutzername",
+    "Password": "Passwort",
+    "Main folder": "Hauptordner",
+    "Save": "Speichern",
+    "Photo": "Foto",
+    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery"
+}
