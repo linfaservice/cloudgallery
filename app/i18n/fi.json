@@ -9,7 +9,7 @@
     "Error connecting. Please check parameters": "Virhe yhdistettäessä. Tarkista parametrit",
     "Error loading. Please exit and reconfigure": "Virhe ladattaessa. Poistu ja määritä uudelleen",
     "Exit?": "Poistutaanko?",
-    "Are you sure you want to exit?": "Oleko varma, että haluat poistua?",
+    "Are you sure you want to exit?": "Haluatko varmasti poistua?",
     "Yes": "Kyllä",
     "No": "Ei",
     "Nextcloud server address": "Nextcloud-palvelimen osoite",
@@ -18,5 +18,5 @@
     "Main folder": "Pääkansio",
     "Save": "Tallenna",
     "Photo": "Kuva",
-    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery"
+    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Tarvitsetko Nextcloud-tilin? Napsauta tästä saadaksesi rajattomasti tilaa pilvigalleriasta"
 }

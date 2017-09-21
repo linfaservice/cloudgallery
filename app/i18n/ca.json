@@ -1,0 +1,22 @@
+{
+    "Loading albums...": "S'estan carregant els àlbums...",
+    "Loading images...": "S'estan carregant les imatges...",
+    "Loading image...": "S'estan carregant la imatge...",
+    "Error loading. Please retry": "Error al carregar. Intenteu-ho de nou.",
+    "Share": "Comparteix",
+    "Collections": "Col·leccions",
+    "Files": "Imatges",
+    "Error connecting. Please check parameters": "Error al connectar. Revisa les paràmetres",
+    "Error loading. Please exit and reconfigure": "Error al carregar. Surt i torna-ho a configurar",
+    "Exit?": "Sortir?",
+    "Are you sure you want to exit?": "Estàs segur que vols sortir?",
+    "Yes": "Yes",
+    "No": "No",
+    "Nextcloud server address": "Adreça del servidor Nextcloud",
+    "Username": "Nom d'usuari",
+    "Password": "Contrasenya",
+    "Main folder": "Carpeta principal",
+    "Save": "Desa",
+    "Photo": "Fotografia",
+    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Necessites un compte de Nextcloud? Prem aquí per espai il·limitat per a una Cloud Gallery"
+}

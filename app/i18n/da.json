@@ -1,0 +1,22 @@
+{
+    "Loading albums...": "Henter albums...",
+    "Loading images...": "Henter billeder...",
+    "Loading image...": "Henter billede...",
+    "Error loading. Please retry": "Fejl ved indlæsning. Prøv venligst igen",
+    "Share": "Del",
+    "Collections": "Samlinger",
+    "Files": "Billeder",
+    "Error connecting. Please check parameters": "Fejl ved forbindelse. Tjek venligst parametre",
+    "Error loading. Please exit and reconfigure": "Fejl ved indlæsning. Luk og konfigurer igen",
+    "Exit?": "Forlad?",
+    "Are you sure you want to exit?": "Er du sikker på at du vil forlade?",
+    "Yes": "Ja",
+    "No": "Nej",
+    "Nextcloud server address": "Nextcloud Serveradresse ",
+    "Username": "Brugernavn",
+    "Password": "Adgangskode",
+    "Main folder": "Hovedfolder",
+    "Save": "Gem",
+    "Photo": "Foto",
+    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Har du brug for en Nextcloud konto? Klik her for at få ubegrænset plads til Cloud Gallery"
+}

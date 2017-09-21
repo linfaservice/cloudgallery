@@ -1,0 +1,22 @@
+{
+    "Loading albums...": "앨범 불러오는 중...",
+    "Loading images...": "이미지 불러오는 중...",
+    "Loading image...": "이미지 불러오는 중...",
+    "Error loading. Please retry": "불러오는 중 오류 발생. 다시 시도해 보세요",
+    "Share": "공유하기",
+    "Collections": "컬렉션",
+    "Files": "이미지",
+    "Error connecting. Please check parameters": "연결 중 오류 발생. 매개변수를 확인하세요",
+    "Error loading. Please exit and reconfigure": "로딩 중 오류 발생. 종료하고 재설정하세요",
+    "Exit?": "종료?",
+    "Are you sure you want to exit?": "정말로 끝내길 원하십니까?",
+    "Yes": "예",
+    "No": "아니오",
+    "Nextcloud server address": "Nextcloud 서버 주소",
+    "Username": "사용자 이름",
+    "Password": "비밀번호",
+    "Main folder": "메인 폴더",
+    "Save": "저장하기",
+    "Photo": "사진",
+    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Nextcloud 계정이 필요하신가요? 여기를 눌러서 클라우드 갤러리를 위한 무제한 용량을 얻으세요"
+}
