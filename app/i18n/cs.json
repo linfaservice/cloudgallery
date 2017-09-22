@@ -1,0 +1,22 @@
+{
+    "Loading albums...": "Nahrávám alba...",
+    "Loading images...": "Nahrávám obrázky...",
+    "Loading image...": "Nahrávám obrázek...",
+    "Error loading. Please retry": "Chyba při načítání. Zkuste to prosím znovu",
+    "Share": "Sdílet",
+    "Collections": "Kolekce",
+    "Files": "Obrázky",
+    "Error connecting. Please check parameters": "Chyba při připojení. Zkontrolujte parametry",
+    "Error loading. Please exit and reconfigure": "Error loading. Please exit and reconfigure",
+    "Exit?": "Konec?",
+    "Are you sure you want to exit?": "Are you sure you want to exit?",
+    "Yes": "Ano",
+    "No": "Ne",
+    "Nextcloud server address": "Nextcloud server address",
+    "Username": "Uživatelské jméno",
+    "Password": "Heslo",
+    "Main folder": "Hlavní složka",
+    "Save": "Uložit",
+    "Photo": "Fotka",
+    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery"
+}

@@ -1,0 +1,22 @@
+{
+    "Loading albums...": "Albumite laadimine...",
+    "Loading images...": "Piltide laadimine...",
+    "Loading image...": "Pildi laadimine...",
+    "Error loading. Please retry": "Viga laadimisel. Palun proovi uuesti.",
+    "Share": "Jaga",
+    "Collections": "Kollektsioonid",
+    "Files": "Pildid",
+    "Error connecting. Please check parameters": "Viga ühendumisel. Palun kontrolli parameetreid",
+    "Error loading. Please exit and reconfigure": "Viga laadimisel. Palun välja ja seadista uuesti.",
+    "Exit?": "Välju?",
+    "Are you sure you want to exit?": "Kas oled kindel, et tahad väljuda?",
+    "Yes": "Jah",
+    "No": "Ei",
+    "Nextcloud server address": "Nextcloud serveri aadress",
+    "Username": "Kasutajanimi",
+    "Password": "Parool",
+    "Main folder": "Peamine kaust",
+    "Save": "Salvesta",
+    "Photo": "Foto",
+    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Kas vajad Nextcloudi kontot? Vajuta siia, et saada piiramatult mahtu Cloud Gallery jaoks"
+}

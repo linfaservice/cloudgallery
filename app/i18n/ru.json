@@ -1,0 +1,22 @@
+{
+    "Loading albums...": "Загрузка альбомов...",
+    "Loading images...": "Загрузка изображений...",
+    "Loading image...": "Загрузка изображения...",
+    "Error loading. Please retry": "Ошибка загрузки, попробуйте снова.",
+    "Share": "Открыть доступ",
+    "Collections": "Коллекции",
+    "Files": "Изображения",
+    "Error connecting. Please check parameters": "Ошибка соединения, проверьте параметры",
+    "Error loading. Please exit and reconfigure": "Ошибка загрузки, выйдите и перенастройте",
+    "Exit?": "Выйти?",
+    "Are you sure you want to exit?": "Действительно выйти?",
+    "Yes": "Да",
+    "No": "Нет",
+    "Nextcloud server address": "Адрес сервера Nextcloud",
+    "Username": "Имя пользователя",
+    "Password": "Пароль",
+    "Main folder": "Основная папка",
+    "Save": "Сохранить",
+    "Photo": "Фото",
+    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Нужна учётная запись Nextcloud? Нажмите здесь для получения неограниченного пространства для галереи Nextcloud"
+}

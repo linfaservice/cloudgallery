@@ -4,7 +4,7 @@
     "Loading image...": "Chargement de l'image...",
     "Error loading. Please retry": "Erreur de chargement. Merci de réessayer",
     "Share": "Partager",
-    "Collections": "Collections",
+    "Collections": "Albums",
     "Files": "Images",
     "Error connecting. Please check parameters": "Erreur de connexion. Merci de vérifier vos paramètres",
     "Error loading. Please exit and reconfigure": "Erreur de chargement. Merci de quitter et de reconfigurer",
@@ -18,5 +18,5 @@
     "Main folder": "Dossier principal",
     "Save": "Enregistrer",
     "Photo": "Photo",
-    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery"
+    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Avez vous besoin d'un compte Nextcloud ? Cliquez ici pour un espace de stockage illimité Cloud Gallery"
 }

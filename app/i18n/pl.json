@@ -1,0 +1,22 @@
+{
+    "Loading albums...": "Ładowanie albumów...",
+    "Loading images...": "Ładowanie obrazów...",
+    "Loading image...": "Ładowanie obrazu...",
+    "Error loading. Please retry": "Błąd ładowania. Spróbuj ponownie",
+    "Share": "Udostępnianie",
+    "Collections": "Kolekcje",
+    "Files": "Obrazy",
+    "Error connecting. Please check parameters": "Błąd połączenia. Sprawdź parametry",
+    "Error loading. Please exit and reconfigure": "Błąd ładowania. Wyjdź i przekonfiguruj",
+    "Exit?": "Wyjść?",
+    "Are you sure you want to exit?": "Czy na pewno chcesz wyjść?",
+    "Yes": "Tak",
+    "No": "Nie",
+    "Nextcloud server address": "Adres serwera Nextcloud",
+    "Username": "Użytkownik",
+    "Password": "Hasło",
+    "Main folder": "Folder główny",
+    "Save": "Zapisz",
+    "Photo": "Zdjęcie",
+    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Potrzebujesz konto Nextcloud? Kliknij tutaj po nielimitowane miejsce dla Cloud Gallery"
+}

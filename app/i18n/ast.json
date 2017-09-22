@@ -1,0 +1,22 @@
+{
+    "Loading albums...": "Cargando álbumes...",
+    "Loading images...": "Cargando imáxenes...",
+    "Loading image...": "Cargando imaxe...",
+    "Error loading. Please retry": "Fallu na carga. Volvi tentalo, por favor",
+    "Share": "Compartir",
+    "Collections": "Coleiciones",
+    "Files": "Imáxenes",
+    "Error connecting. Please check parameters": "Fallu na conexón. Comprueba la conexón, por favor",
+    "Error loading. Please exit and reconfigure": "Fallu na carga. Cola y reconfigura, por favor",
+    "Exit?": "¿Colar?",
+    "Are you sure you want to exit?": "¿De xuru que quies colar?",
+    "Yes": "Sí",
+    "No": "Non",
+    "Nextcloud server address": "Direición de sirvidor de Nextcloud",
+    "Username": "Nome d'usuariu",
+    "Password": "Contraseña",
+    "Main folder": "Carpeta principal",
+    "Save": "Guardar",
+    "Photo": "Semeya",
+    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "¿Precises una cuenta de Nextcloud? Primi equí pa espaciu ensin llende pa la galería na ñube"
+}
