@@ -5,7 +5,6 @@ import { AppModule } from "./app.module";
 import * as connectivity from "tns-core-modules/connectivity";
 import dialogs = require("ui/dialogs");
 import Loader from "./common/loader";
-import Monitor from "./common/monitor";
 import firebase = require("nativescript-plugin-firebase");
 
 
@@ -114,10 +113,6 @@ connectivity.startMonitoring(function onConnectionTypeChanged(newConnectionType:
     }
 });
 */
-
-let monitor = new Monitor(new Loader());
-monitor.startPingAlive("https://www.linfaservice.it");
-
 
 enableProdMode();
 

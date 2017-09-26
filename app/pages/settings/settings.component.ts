@@ -54,14 +54,16 @@ export class SettingsComponent {
       if(this.host==null || this.host=="") return false;
       if(this.username==null || this.username=="") return false;
       if(this.password==null || this.password=="") return false;
+      if(!this.host.startsWith("https://")) {
+        Toast.makeText(this.translate.instant("Nextcloud address must start with https://")).show();
+        return false;
+      }
 
       //if(!okLogin()) configured = false;
       return configured;
     }
 
     private save() {
-
-      this.util.log("check", this.isWellConfigured());
 
       if(this.isWellConfigured()) {
         Settings.setString("host", this.util.replaceAll(this.host, " ", ""));

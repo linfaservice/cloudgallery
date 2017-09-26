@@ -4,19 +4,22 @@ import { Router } from "@angular/router";
 import { RouterExtensions } from "nativescript-angular/router";
 import * as dialogs from "ui/dialogs";
 import { exit } from 'nativescript-exit';
+import * as Settings from "application-settings";
 
 
 @Injectable()
 export class Util {
 
-    private DEBUG = false;
+    public DEBUG = true;
+    public LOGTOSETTINGS = true;
     private id;
 
     constructor(
         private router:RouterExtensions, 
         private route: Router
     ) {
-        this.id = "UTIL_" + this.getTimestamp();        
+        this.id = "UTIL_" + this.getTimestamp();   
+        this.loggerReset();     
     }
 
     public getID() {
@@ -27,10 +30,29 @@ export class Util {
         return text.replace(new RegExp(search, 'g'), replacement);
     } 
 
+    public loggerReset() {
+        var LOGAGE = Settings.getNumber("_LOGAGE");
+        if(LOGAGE==null) LOGAGE = 0;
+        if(LOGAGE>=1) {
+            LOGAGE = 0;
+            Settings.setString("_LOG", "");
+        }
+        Settings.setNumber("_LOGAGE", LOGAGE+1);
+    }
+
+    public loggerAppend(newLog) {
+        var log = Settings.getString("_LOG");
+        Settings.setString("_LOG", log + newLog);
+    }
+
     public log(tag, obj) {
         if(this.DEBUG) {
-            console.log(tag);
             try {
+                if(this.LOGTOSETTINGS) {
+                    this.loggerAppend(tag + "\n");
+                    this.loggerAppend(JSON.stringify(obj, null, 10) + "\n");
+                }
+                console.log(tag);
                 console.log(JSON.stringify(obj, null, 10));
             } catch(ex) {}
         }

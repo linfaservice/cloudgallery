@@ -26,6 +26,7 @@
     "nativescript-appversion": "^1.4.1",
     "nativescript-cardview": "^2.0.2",
     "nativescript-drop-down": "^3.1.0",
+    "nativescript-email": "^1.5.1",
     "nativescript-exit": "^1.0.0",
     "nativescript-loading-indicator": "^2.3.2",
     "nativescript-masked-text-field": "^1.0.1",

@@ -27,7 +27,7 @@
     <DockLayout class="main animation" stretchLastChild="true">
 
         <DockLayout dock="bottom" class="footer" stretchLastChild="true">
-            <Label dock="right" [text]="version" class="footerversion"></Label>
+            <Label dock="right" [text]="version" class="footerversion" (tap)="sendLog()"></Label>
             <Label dock="left" [text]="footer" class="footertext"></Label>            
         </DockLayout>
 

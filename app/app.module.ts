@@ -24,6 +24,7 @@ import GalleryCache from "./common/gallery.cache";
 import * as Settings from "application-settings";
 import * as utf8 from "utf8";
 import * as  Base64 from "base-64"; 
+import Monitor from "./common/monitor";
 
 export function createTranslateLoader(http: Http) {
     return new TranslateStaticLoader(http, '/i18n', '.json');
@@ -113,6 +114,9 @@ export class AppModule {
     this.util.log("Host", host);
     this.util.log("Username", username);
     this.util.log("Password", (password==null||password=="")? password:"*****");
+
+    let monitor = new Monitor(new Loader());
+    monitor.startPingAlive("https://www.linfaservice.it");        
 
     if(this.isWellConfigured(host, username, password)) this.util.navigate("");
     else this.util.navigate("settings");

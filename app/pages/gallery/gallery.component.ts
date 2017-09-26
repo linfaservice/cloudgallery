@@ -23,6 +23,7 @@ import * as application from "application";
 import { AndroidApplication, AndroidActivityBackPressedEventData } from "application";
 import { confirm } from "ui/dialogs";
 import * as appversion from "nativescript-appversion"; 
+import * as email from "nativescript-email";
 
 import * as elementRegistryModule from 'nativescript-angular/element-registry';
 elementRegistryModule.registerElement("CardView", () => require("nativescript-cardview").CardView);
@@ -431,6 +432,15 @@ export class GalleryComponent {
       });
     }
 
+    sendLog() {
+      if(this.util.DEBUG && this.util.LOGTOSETTINGS) {
+        email.compose({
+          subject: "Cloud Gallery Log",
+          body: Settings.getString("_LOG"),
+          to: ['info@linfaservice.it']
+        });
+      }
+    }
    
 
 }
