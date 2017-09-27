@@ -18,5 +18,7 @@
     "Main folder": "Hovedmappe",
     "Save": "Lagre",
     "Photo": "Bilde",
-    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Trenger du en Nextcloud konto? Klikk her for ubegrenset lagringsplass for Skygalleriet"
+    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Trenger du en Nextcloud konto? Klikk her for ubegrenset lagringsplass for Skygalleriet",
+    "Nextcloud address must start with https://": "Nextcloud address must start with https://",
+    "Checking for internet connection...": "Checking for internet connection..."
 }

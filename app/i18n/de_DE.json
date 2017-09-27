@@ -18,5 +18,7 @@
     "Main folder": "Hauptordner",
     "Save": "Speichern",
     "Photo": "Foto",
-    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Brauchen Sie ein Nutzerkonto? Klicken Sie hier für unbegrenzten Speicherplatz für Cloud Gallery"
+    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Brauchen Sie ein Nutzerkonto? Klicken Sie hier für unbegrenzten Speicherplatz für Cloud Gallery",
+    "Nextcloud address must start with https://": "Nextcloud address must start with https://",
+    "Checking for internet connection...": "Checking for internet connection..."
 }

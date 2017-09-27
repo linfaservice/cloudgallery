@@ -18,5 +18,7 @@
     "Main folder": "Cartella principale",
     "Save": "Salva",
     "Photo": "Foto",
-    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Ti serve un account Nextcloud. Fai clic qui per spazio illimitato su Cloud Gallery"
+    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Ti serve un account Nextcloud. Fai clic qui per spazio illimitato su Cloud Gallery",
+    "Nextcloud address must start with https://": "Nextcloud address must start with https://",
+    "Checking for internet connection...": "Checking for internet connection..."
 }

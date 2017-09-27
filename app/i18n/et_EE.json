@@ -18,5 +18,7 @@
     "Main folder": "Peamine kaust",
     "Save": "Salvesta",
     "Photo": "Foto",
-    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Kas vajad Nextcloudi kontot? Vajuta siia, et saada piiramatult mahtu Cloud Gallery jaoks"
+    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Kas vajad Nextcloudi kontot? Vajuta siia, et saada piiramatult mahtu Cloud Gallery jaoks",
+    "Nextcloud address must start with https://": "Nextcloud address must start with https://",
+    "Checking for internet connection...": "Checking for internet connection..."
 }

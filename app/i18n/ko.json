@@ -18,5 +18,7 @@
     "Main folder": "메인 폴더",
     "Save": "저장하기",
     "Photo": "사진",
-    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Nextcloud 계정이 필요하신가요? 여기를 눌러서 클라우드 갤러리를 위한 무제한 용량을 얻으세요"
+    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Nextcloud 계정이 필요하신가요? 여기를 눌러서 클라우드 갤러리를 위한 무제한 용량을 얻으세요",
+    "Nextcloud address must start with https://": "Nextcloud address must start with https://",
+    "Checking for internet connection...": "Checking for internet connection..."
 }

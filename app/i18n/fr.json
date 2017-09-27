@@ -18,5 +18,7 @@
     "Main folder": "Dossier principal",
     "Save": "Enregistrer",
     "Photo": "Photo",
-    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Avez vous besoin d'un compte Nextcloud ? Cliquez ici pour un espace de stockage illimité Cloud Gallery"
+    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Avez vous besoin d'un compte Nextcloud ? Cliquez ici pour un espace de stockage illimité Cloud Gallery",
+    "Nextcloud address must start with https://": "Nextcloud address must start with https://",
+    "Checking for internet connection...": "Checking for internet connection..."
 }
