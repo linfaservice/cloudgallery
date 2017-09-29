@@ -128,7 +128,7 @@ export class GalleryComponent {
             cancelButtonText: this.translate.instant("No")
         };
 
-        this.util.log("Back", "confirm exit?"); 
+        this.util.log("Back confirm exit?", null); 
         confirm(options).then((result: boolean) => {
             this.util.log("Back", result);          
             if(result) {
@@ -149,7 +149,8 @@ export class GalleryComponent {
     private loadGallery(item) {
        
       this.loader.showLoader(this.translate.instant("Loading albums..."));
-      this.util.log("loadGallery", item); 
+      //this.util.log("Load Gallery", item); 
+      this.util.log("Load Gallery", null); 
 
       let path = item.path;
       let nodeid = item.nodeid;
@@ -173,16 +174,18 @@ export class GalleryComponent {
       // string sanitize
       let pathsan = this.util.replaceAll(path, "&", "%26");      
       let url = this.host+"/index.php/apps/gallery/api/files/list?location="+pathsan+"&mediatypes=image/jpeg;image/gif;image/png&features=&etag";
-      this.util.log("GET", url);
+      this.util.log("GET list", null);
 
       // try from cache first
-      this.util.log("Get Album Cache", this.cache.images[this.cache.currentAlbum.nodeid]);
+      //this.util.log("Get Album Cache", this.cache.images[this.cache.currentAlbum.nodeid]);
+      this.util.log("Get Album Cache: " + this.cache.currentAlbum.nodeid, null);
       if(this.cache.images[this.cache.currentAlbum.nodeid].loaded) {
         
-        this.util.log("Cache Found!", "Retrieving from cache");
+        this.util.log("Cache Found! Retrieving from cache", null);
         for(let a in this.cache.images[this.cache.currentAlbum.nodeid].items) {
           let item = this.cache.images[this.cache.currentAlbum.nodeid].items[a];
-          this.util.log("Cache album added", item);
+          //this.util.log("Cache album added", item);
+          this.util.log("Cache album added: " + a, null);
           this.current.push(item);
         }
         this.updateFooter(this.cache.images[this.cache.currentAlbum.nodeid].totAlbums, 0);
@@ -196,7 +199,7 @@ export class GalleryComponent {
 
       } else {
 
-        this.util.log("Cache Not Found :(", "Retrieving from cloud...");
+        this.util.log("Cache Not Found :( Retrieving from cloud...", null);
       
         Http.request({
             url: url,
@@ -216,12 +219,13 @@ export class GalleryComponent {
 
             if(data==null) {
               Toast.makeText(this.translate.instant("Error loading. Please retry")).show();
-              this.util.log("Error", "Data null");
+              this.util.log("Error Data null", null);
               this.loader.hideLoader();
               return;   
             }
 
-            this.util.log("response to ", path+"("+nodeid+"), current album:" + this.cache.currentAlbum.nodeid);
+            //this.util.log("response to ", path+"("+nodeid+"), current album:" + this.cache.currentAlbum.nodeid);
+            this.util.log("Response to ("+nodeid+"), Current album:" + this.cache.currentAlbum.nodeid, null);
 
             let albums = data.albums;  
             // error loading
@@ -257,7 +261,8 @@ export class GalleryComponent {
                   }
                   this.cache.images[this.cache.currentAlbum.nodeid].items.push(albumObj);
                   totAlbums++;
-                  this.util.log("Album added to "+nodeid+":", albumObj);
+                  //this.util.log("Album added to "+nodeid+":", albumObj);
+                  this.util.log("Album added to "+nodeid, null);
                 }
               }
               this.progressNum++;
@@ -267,7 +272,8 @@ export class GalleryComponent {
             this.cache.images[this.cache.currentAlbum.nodeid].loaded = true;
             this.cache.images[this.cache.currentAlbum.nodeid].totAlbums = totAlbums;
             this.cache.images[this.cache.currentAlbum.nodeid].data = data;
-            this.util.log("Set Album Cache", this.cache.images[this.cache.currentAlbum.nodeid]);
+            //this.util.log("Set Album Cache", this.cache.images[this.cache.currentAlbum.nodeid]);
+            this.util.log("Set Album Cache this.cache.currentAlbum.nodeid", null);
 
             this.updateFooter(totAlbums, 0);
             this.loader.hideLoader();
@@ -355,10 +361,11 @@ export class GalleryComponent {
                   */
                   this.progressNum++;
                   this.progressVal = (this.progressNum*100)/this.progressTot;
-                  this.util.log("file added to "+albumid+": ", "(" + item.nodeid + ") " + item.path + " - " + item.mtime);
+                  //this.util.log("file added to "+albumid+": ", "(" + item.nodeid + ") " + item.path + " - " + item.mtime);
+                  this.util.log("File added to "+albumid+" (" + item.nodeid + ") - " + item.mtime, null);
                 })
                 .catch((error)=> {
-                  //this.util.log("error", error);
+                  this.util.log("error", error);
                 });  
 
 				// hide the loader when first image in directory is loaded
@@ -386,7 +393,7 @@ export class GalleryComponent {
     
     ngOnInit() {
       this.page.actionBarHidden = false;
-      this.util.log("Page Init", "Gallery");      
+      this.util.log("Page Init Gallery", null);      
 
       if (application.android) {
         application.android.on(
@@ -410,12 +417,14 @@ export class GalleryComponent {
     }
 
     onTapFolder(item) {
-      this.util.log("tap", item);
+      //this.util.log("tap", item);
+      this.util.log("Tap item folder", null);
       this.loadGallery(item);
     }
 
     onTapImage(item) {
-      this.util.log("tap", item.title);
+      //this.util.log("tap", item.title);
+      this.util.log("Tap item image", null);
       this.loader.showLoader(this.translate.instant("Loading image...")); 
 
       let options = {

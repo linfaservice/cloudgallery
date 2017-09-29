@@ -50,13 +50,13 @@ export class Util {
             try {
                 if(this.LOGTOSETTINGS) {
                     this.loggerAppend(tag + "\n");
-                    this.loggerAppend(JSON.stringify(obj, null, 10) + "\n");
+                    if(obj!=null) this.loggerAppend(JSON.stringify(obj, null, 10) + "\n");
                 }
                 console.log(tag);
-                console.log(JSON.stringify(obj, null, 10));
+                if(obj!=null) console.log(JSON.stringify(obj, null, 10));
             } catch(ex) {}
         }
-    }
+    }   
 
     public sleep(time) {
         return new Promise((resolve) => setTimeout(resolve, time));

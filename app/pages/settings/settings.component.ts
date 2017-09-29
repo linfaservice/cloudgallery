@@ -7,6 +7,9 @@ import * as Settings from "application-settings";
 import * as util from "utils/utils";
 import * as Platform from "platform";
 import { TranslateService } from "ng2-translate";
+import * as Http from "tns-core-modules/http"
+import * as  Base64 from "base-64";
+import Loader from "../../common/loader";
 
 
   
@@ -27,6 +30,7 @@ export class SettingsComponent {
     private password;
     private rootdir;
     
+    private loader = new Loader();
  
     public constructor(
       private page: Page,
@@ -69,8 +73,12 @@ export class SettingsComponent {
         Settings.setString("host", this.util.replaceAll(this.host, " ", ""));
         Settings.setString("username", this.util.replaceAll(this.username, " ", ""));
         Settings.setString("password", this.util.replaceAll(this.password, " ", ""));
-        Settings.setString("rootdir", (this.rootdir==null)?"":this.rootdir.trim());        
-        this.util.navigate("");
+        Settings.setString("rootdir", (this.rootdir==null)?"":this.rootdir.trim()); 
+        
+        this.tryConnection(this.host, this.username, this.password, ()=> {
+          this.util.navigate("");
+        });
+
       } else {
         Toast.makeText(this.translate.instant("Error connecting. Please check parameters")).show();
       }
@@ -80,4 +88,57 @@ export class SettingsComponent {
       util.openUrl("https://www.operweb.com/nextcloud-gallery/");
     }
 
+
+    private tryConnection(host, username, password, callOk) {
+
+      this.loader.showLoader(this.translate.instant("Checking connection..."));
+
+      let url = host+"/index.php/apps/gallery/api/files/list?location=&mediatypes=image/jpeg;&features=&etag";
+      let headers = { 
+        "OCS-APIREQUEST": "true",
+        "Authorization": "Basic "+Base64.encode(username+':'+password)
+      } 
+
+      Http.request({
+        url: url,
+        method: "GET",
+        headers: headers
+      }).then((response:any)=> {
+
+        let data = null;
+
+        try {   
+          data = response.content.toJSON();
+        } catch(e) {
+          Toast.makeText(this.translate.instant("Error connecting. Please check parameters")).show();
+          this.util.log("Error", e);
+          this.loader.hideLoader();
+          return;              
+        }
+        
+        if(data==null) {
+          Toast.makeText(this.translate.instant("Error connecting. Please check parameters")).show();
+          this.util.log("Error Data null", null);
+          this.loader.hideLoader();
+          return;   
+        }
+
+        console.log(data);
+        let albums = data.albums;  
+        // error loading
+        if(albums==null) {
+          Toast.makeText(this.translate.instant("Error connecting. Please check parameters")).show();
+          this.loader.hideLoader();
+          return;
+        }        
+        
+        callOk();
+
+      }, (e)=> {
+        Toast.makeText(this.translate.instant("Error connecting. Please check parameters")).show();
+        this.util.log("Error", e);
+        this.loader.hideLoader();
+        return;
+      });       
+    }
 }
