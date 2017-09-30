@@ -20,5 +20,6 @@
     "Photo": "Ljósmynd",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Vantar þig Nextcloud-aðgang? Smelltu hér til að fá ótakmarkað geymslupláss á ljósmyndaskýi",
     "Nextcloud address must start with https://": "Nextcloud address must start with https://",
-    "Checking for internet connection...": "Checking for internet connection..."
+    "Checking for internet connection...": "Checking for internet connection...",
+    "Checking connection...": "Checking connection..."
 }

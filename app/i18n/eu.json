@@ -20,5 +20,6 @@
     "Photo": "Argazkia",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery",
     "Nextcloud address must start with https://": "Nextcloud address must start with https://",
-    "Checking for internet connection...": "Checking for internet connection..."
+    "Checking for internet connection...": "Checking for internet connection...",
+    "Checking connection...": "Checking connection..."
 }

@@ -20,5 +20,6 @@
     "Photo": "Foto",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Precisa de uma conta Nextcloud? Clique aqui para ter espaço ilimitado na Galeria da Nuvem",
     "Nextcloud address must start with https://": "Endereços Nextcloud devem começar com https://",
-    "Checking for internet connection...": "Verificando a conexão com a internet..."
+    "Checking for internet connection...": "Verificando a conexão com a internet...",
+    "Checking connection...": "Checking connection..."
 }
