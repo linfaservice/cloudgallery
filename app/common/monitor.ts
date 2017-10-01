@@ -38,7 +38,7 @@ export default class Monitor {
         } else {
             if(!this.ping) {
                 this.ping = true;
-                this.loader.showLoader("Checking for internet connection...");
+                this.loader.showLoader("Checking for internet connection…");
             }
         }
     }
