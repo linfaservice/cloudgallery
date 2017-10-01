@@ -65,7 +65,7 @@ var SettingsComponent = /** @class */ (function () {
     };
     SettingsComponent.prototype.tryConnection = function (host, username, password, callOk) {
         var _this = this;
-        this.loader.showLoader(this.translate.instant("Checking connection..."));
+        this.loader.showLoader(this.translate.instant("Checking connection…"));
         var url = host + "/index.php/apps/gallery/api/files/list?location=&mediatypes=image/jpeg;&features=&etag";
         var headers = {
             "OCS-APIREQUEST": "true",
