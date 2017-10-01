@@ -148,7 +148,7 @@ export class GalleryComponent {
  
     private loadGallery(item) {
        
-      this.loader.showLoader(this.translate.instant("Loading albums..."));
+      this.loader.showLoader(this.translate.instant("Loading albums…"));
       //this.util.log("Load Gallery", item); 
       this.util.log("Load Gallery", null); 
 
@@ -199,7 +199,7 @@ export class GalleryComponent {
 
       } else {
 
-        this.util.log("Cache Not Found :( Retrieving from cloud...", null);
+        this.util.log("Cache Not Found :( Retrieving from cloud…", null);
       
         Http.request({
             url: url,
@@ -310,7 +310,7 @@ export class GalleryComponent {
       }
 
       if(toShowLoader) {
-        this.loader.showLoader(this.translate.instant("Loading images..."));
+        this.loader.showLoader(this.translate.instant("Loading images…"));
         this.progressNum = 0;
         this.progressTot = totFiles;
         this.progressVal = 0;
@@ -425,7 +425,7 @@ export class GalleryComponent {
     onTapImage(item) {
       //this.util.log("tap", item.title);
       this.util.log("Tap item image", null);
-      this.loader.showLoader(this.translate.instant("Loading image...")); 
+      this.loader.showLoader(this.translate.instant("Loading image…")); 
 
       let options = {
           context: {
