@@ -113,7 +113,7 @@ var GalleryComponent = /** @class */ (function () {
     };
     GalleryComponent.prototype.loadGallery = function (item) {
         var _this = this;
-        this.loader.showLoader(this.translate.instant("Loading albums..."));
+        this.loader.showLoader(this.translate.instant("Loading albums…"));
         //this.util.log("Load Gallery", item); 
         this.util.log("Load Gallery", null);
         var path = item.path;
@@ -254,7 +254,7 @@ var GalleryComponent = /** @class */ (function () {
             }
         }
         if (toShowLoader) {
-            this.loader.showLoader(this.translate.instant("Loading images..."));
+            this.loader.showLoader(this.translate.instant("Loading images…"));
             this.progressNum = 0;
             this.progressTot = totFiles;
             this.progressVal = 0;
@@ -354,7 +354,7 @@ var GalleryComponent = /** @class */ (function () {
     GalleryComponent.prototype.onTapImage = function (item) {
         //this.util.log("tap", item.title);
         this.util.log("Tap item image", null);
-        this.loader.showLoader(this.translate.instant("Loading image..."));
+        this.loader.showLoader(this.translate.instant("Loading image…"));
         var options = {
             context: {
                 loader: this.loader,
