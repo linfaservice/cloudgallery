@@ -91,7 +91,7 @@ export class SettingsComponent {
 
     private tryConnection(host, username, password, callOk) {
 
-      this.loader.showLoader(this.translate.instant("Checking connection..."));
+      this.loader.showLoader(this.translate.instant("Checking connection…"));
 
       let url = host+"/index.php/apps/gallery/api/files/list?location=&mediatypes=image/jpeg;&features=&etag";
       let headers = { 
