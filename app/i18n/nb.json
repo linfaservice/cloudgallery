@@ -1,7 +1,7 @@
 {
-    "Loading albums…": "Loading albums…",
-    "Loading images…": "Loading images…",
-    "Loading image…": "Loading image…",
+    "Loading albums…": "Laster inn album…",
+    "Loading images…": "Laster inn bilder…",
+    "Loading image…": "Laster inn bilde…",
     "Error loading. Please retry": "Feil ved innlasting. Prøv igjen",
     "Share": "Del",
     "Collections": "Samlinger",
@@ -20,6 +20,6 @@
     "Photo": "Bilde",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Trenger du en Nextcloud konto? Klikk her for ubegrenset lagringsplass for Skygalleriet",
     "Nextcloud address must start with https://": "Nextcloud-adresser må starte med https://",
-    "Checking for internet connection…": "Checking for internet connection…",
-    "Checking connection…": "Checking connection…"
+    "Checking for internet connection…": "Sjekker internettforbindelse…",
+    "Checking connection…": "Sjekker tilkobling…"
 }

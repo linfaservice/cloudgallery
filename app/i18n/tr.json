@@ -1,7 +1,7 @@
 {
-    "Loading albums…": "Loading albums…",
-    "Loading images…": "Loading images…",
-    "Loading image…": "Loading image…",
+    "Loading albums…": "Albümler yükleniyor…",
+    "Loading images…": "Görseller yükleniyor…",
+    "Loading image…": "Görsel yükleniyor…",
     "Error loading. Please retry": "Yükleme sırasında sorun çıktı. Lütfen yeniden deneyin",
     "Share": "Paylaş",
     "Collections": "Derlemeler",
@@ -20,6 +20,6 @@
     "Photo": "Fotoğraf",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Bir Nextcloud hesabına mı gerek duyuyorsunuz? Sınırsız boyutlu Bulut Galerisi için buraya tıklayın",
     "Nextcloud address must start with https://": "Nextcloud adresi https:// ile başlamalıdır",
-    "Checking for internet connection…": "Checking for internet connection…",
-    "Checking connection…": "Checking connection…"
+    "Checking for internet connection…": "İnternet bağlantısı denetleniyor…",
+    "Checking connection…": "Bağlantı denetleniyor…"
 }

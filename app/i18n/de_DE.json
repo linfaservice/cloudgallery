@@ -1,7 +1,7 @@
 {
-    "Loading albums…": "Loading albums…",
-    "Loading images…": "Loading images…",
-    "Loading image…": "Loading image…",
+    "Loading albums…": "Lade Alben...",
+    "Loading images…": "Lade Bilder...",
+    "Loading image…": "Lade Bild...",
     "Error loading. Please retry": "Fehler beim Laden. Bitte versuchen Sie es erneut",
     "Share": "Teilen",
     "Collections": "Sammlungen",
@@ -20,6 +20,6 @@
     "Photo": "Foto",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Brauchen Sie ein Nutzerkonto? Klicken Sie hier für unbegrenzten Speicherplatz für Cloud Gallery",
     "Nextcloud address must start with https://": "Die Nextcloud-Adresse muss mit https:// beginnen",
-    "Checking for internet connection…": "Checking for internet connection…",
-    "Checking connection…": "Checking connection…"
+    "Checking for internet connection…": "Prüfe die Internetverbindung...",
+    "Checking connection…": "Prüfe die Verbindung..."
 }

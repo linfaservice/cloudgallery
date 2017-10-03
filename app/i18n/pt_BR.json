@@ -1,7 +1,7 @@
 {
-    "Loading albums…": "Loading albums…",
-    "Loading images…": "Loading images…",
-    "Loading image…": "Loading image…",
+    "Loading albums…": "Carregando álbuns...",
+    "Loading images…": "Carregando imagens...",
+    "Loading image…": "Carregando imagem...",
     "Error loading. Please retry": "Erro no carregamento. Tente novamente",
     "Share": "Compartilhar",
     "Collections": "Acervos",
@@ -20,6 +20,6 @@
     "Photo": "Foto",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Precisa de uma conta Nextcloud? Clique aqui para ter espaço ilimitado na Galeria da Nuvem",
     "Nextcloud address must start with https://": "Endereços Nextcloud devem começar com https://",
-    "Checking for internet connection…": "Checking for internet connection…",
-    "Checking connection…": "Checking connection…"
+    "Checking for internet connection…": "Verificando conexão com a internet...",
+    "Checking connection…": "Verificando conexão..."
 }
