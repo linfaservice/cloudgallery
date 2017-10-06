@@ -1,7 +1,7 @@
 {
-    "Loading albums...": "Загрузка альбомов...",
-    "Loading images...": "Загрузка изображений...",
-    "Loading image...": "Загрузка изображения...",
+    "Loading albums…": "Загрузка альбомов...",
+    "Loading images…": "Загрузка изображений...",
+    "Loading image…": "Загрузка изображения...",
     "Error loading. Please retry": "Ошибка загрузки, попробуйте снова.",
     "Share": "Открыть доступ",
     "Collections": "Коллекции",
@@ -19,7 +19,7 @@
     "Save": "Сохранить",
     "Photo": "Фото",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Нужна учётная запись Nextcloud? Нажмите здесь для получения неограниченного пространства для галереи Nextcloud",
-    "Nextcloud address must start with https://": "Nextcloud address must start with https://",
-    "Checking for internet connection...": "Checking for internet connection...",
-    "Checking connection...": "Checking connection..."
+    "Nextcloud address must start with https://": "Адрес сервера Nextcloud должен начинаться с https://",
+    "Checking for internet connection…": "Проверка интернет-соединения...",
+    "Checking connection…": "Проверка соединения..."
 }
