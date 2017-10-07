@@ -1,7 +1,7 @@
 {
-    "Loading albums...": "Cargando álbumes...",
-    "Loading images...": "Cargando imágenes...",
-    "Loading image...": "Cargando imagen...",
+    "Loading albums…": "Cargando álbumes...",
+    "Loading images…": "Cargando imágenes...",
+    "Loading image…": "Cargando imagen:",
     "Error loading. Please retry": "Error en la carga. Inténtalo de nuevo",
     "Share": "Compartir",
     "Collections": "Colecciones",
@@ -18,8 +18,8 @@
     "Main folder": "Carpeta principal",
     "Save": "Guardar",
     "Photo": "Foto",
-    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery",
-    "Nextcloud address must start with https://": "Nextcloud address must start with https://",
-    "Checking for internet connection...": "Checking for internet connection...",
-    "Checking connection...": "Checking connection..."
+    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "¿Necesitas una cuenta de Nextcloud? Haz clic aquí para conseguir espacio ilimitado para Cloud Gallery",
+    "Nextcloud address must start with https://": "La dirección de Nextcloud debe comenzar con https://",
+    "Checking for internet connection…": "Comprobando la conexión a internet...",
+    "Checking connection…": "Comprobando conexión..."
 }
