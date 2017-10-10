@@ -10,8 +10,8 @@ import * as Settings from "application-settings";
 @Injectable()
 export class Util {
 
-    public DEBUG = true;
-    public LOGTOSETTINGS = true;
+    public DEBUG = false;
+    public LOGTOSETTINGS = false;
     private id;
 
     constructor(

@@ -76,6 +76,7 @@ export class SettingsComponent {
         Settings.setString("rootdir", (this.rootdir==null)?"":this.rootdir.trim()); 
         
         this.tryConnection(this.host, this.username, this.password, ()=> {
+          this.loader.hideLoader();
           this.util.navigate("");
         });
 

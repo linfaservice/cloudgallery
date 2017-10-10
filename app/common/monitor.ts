@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Util } from "./util"
 import Loader from "./loader"
 import http = require("tns-core-modules/http");
+import { TranslateService } from "ng2-translate";
 
 
 @Injectable()
@@ -10,7 +11,10 @@ export default class Monitor {
     online:boolean;
     ping:boolean; 
 
-    constructor(private loader:Loader) {
+    constructor(
+        private loader:Loader,
+        private translate: TranslateService,
+    ) {
         this.online = false;
         this.ping = false;
     }    
@@ -38,7 +42,7 @@ export default class Monitor {
         } else {
             if(!this.ping) {
                 this.ping = true;
-                this.loader.showLoader("Checking for internet connection…");
+                this.loader.showLoader(this.translate.instant("Checking for internet connection…"));
             }
         }
     }

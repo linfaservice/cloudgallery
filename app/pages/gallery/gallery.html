@@ -32,7 +32,8 @@
         </DockLayout>
 
         <GridLayout tkExampleTitle tkToggleNavButton dock="top">
-            <RadListView id="galleryView" [items]="current" class="gallery-container">
+            <RadListView id="galleryView" class="gallery-container"
+                [items]="current" (loaded)="onRadListLoaded($event)" >
                 <ng-template tkListItemTemplate let-item="item">
                     <StackLayout orientation="vertical">
                         <StackLayout *ngIf="item!=null && item.isAlbum" 
@@ -57,8 +58,7 @@
                     <Label text=""></Label>
                 </ng-template>        
                 <ListViewStaggeredLayout tkListViewLayout 
-                    scrollDirection="Vertical" 
-                    spanCount="3">
+                    scrollDirection="Vertical" >
                 </ListViewStaggeredLayout>                   
             </RadListView>
         </GridLayout>

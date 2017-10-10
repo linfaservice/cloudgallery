@@ -11,12 +11,12 @@ import { ModalDialogService } from "nativescript-angular/modal-dialog";
 import { ImageModalComponent } from "./image-modal.component";
 import * as ImageSourceModule from "image-source";
 import * as Http from "tns-core-modules/http"
-import { RadListView } from "nativescript-telerik-ui-pro/listview"
+import { RadListView, ListViewStaggeredLayout } from "nativescript-telerik-ui-pro/listview"
 import * as timer from "timer";
 import * as Settings from "application-settings";
 import * as Platform from "platform";
 import { TranslateService } from "ng2-translate";
-import { on as applicationOn, launchEvent, suspendEvent, resumeEvent, exitEvent, lowMemoryEvent, uncaughtErrorEvent, ApplicationEventData, start as applicationStart } from "application";
+import { on as applicationOn, off as applicationOff, launchEvent, suspendEvent, resumeEvent, exitEvent, lowMemoryEvent, uncaughtErrorEvent, ApplicationEventData, start as applicationStart } from "application";
 import * as utf8 from "utf8"; 
 import * as  Base64 from "base-64";
 import * as application from "application";
@@ -24,6 +24,7 @@ import { AndroidApplication, AndroidActivityBackPressedEventData } from "applica
 import { confirm } from "ui/dialogs";
 import * as appversion from "nativescript-appversion"; 
 import * as email from "nativescript-email";
+import {screen} from "tns-core-modules/platform/platform"
 
 import * as elementRegistryModule from 'nativescript-angular/element-registry';
 elementRegistryModule.registerElement("CardView", () => require("nativescript-cardview").CardView);
@@ -48,6 +49,10 @@ export class GalleryComponent {
     private rootdir;
     private headers;
 
+    private radList: RadListView;
+    private nColMin;
+    private nColMax;
+
     /*
     private images = new ObservableArray<ObservableArray<GalleryItem>>();
     private current = new ObservableArray<GalleryItem>();
@@ -66,7 +71,6 @@ export class GalleryComponent {
     private loader = new Loader();
     private imageScanner;
 
-    
     public constructor(
       private page: Page,
 	    private util: Util,
@@ -76,6 +80,12 @@ export class GalleryComponent {
       private translate: TranslateService,
       private cache: GalleryCache
     )  {
+
+      //calc dimensions for responsive view
+      let nCol1 = Math.floor(screen.mainScreen.heightDIPs/320)*3;
+      let nCol2 = Math.floor(screen.mainScreen.widthDIPs/320)*3;
+      if(nCol1>nCol2) { this.nColMax=nCol1; this.nColMin=nCol2}
+      else { this.nColMax=nCol2; this.nColMin=nCol1}
 
       appversion.getVersionName().then((v: string)=> {
           this.version = "Version " + v;
@@ -97,6 +107,60 @@ export class GalleryComponent {
         this.cache.images = new Array<GalleryItem>();
         this.home();
       });
+    }
+
+    onRadListLoaded(args) {
+      this.radList = <RadListView>args.object;  
+      let staggeredLayout = new ListViewStaggeredLayout();
+
+      this.util.log("Initial screen orientation: ", screen.mainScreen.widthDIPs + "x" + screen.mainScreen.heightDIPs);
+      if(screen.mainScreen.widthDIPs>screen.mainScreen.heightDIPs) {
+        this.setOrientation({newValue: "landscape"});
+      } else {
+        this.setOrientation({newValue: "portrait"});
+      }     
+    }
+
+    ngOnInit() {
+      this.page.actionBarHidden = false;
+      this.util.log("Page Init Gallery", null);      
+
+      if (application.android) {
+        application.android.on(
+            AndroidApplication.activityBackPressedEvent, 
+            (data: AndroidActivityBackPressedEventData) => {
+                data.cancel = true; // prevents default back button behavior
+                this.back();
+            } 
+        );       
+      }
+
+      /*
+      applicationOn(resumeEvent, (args: ApplicationEventData)=> {
+          this.loadGallery({path: this.path, nodeid: this.nodeid});
+      });   
+      */ 
+
+      applicationOn("orientationChanged", (e)=>{ this.setOrientation(e); });   
+    }
+
+    ngOnDestroy() {
+      applicationOff("orientationChanged", this.setOrientation);
+    }    
+ 
+    setOrientation(e) {
+      this.util.log("Set orientation: ", e.newValue);
+      if(e.newValue == "portrait") {
+          let staggeredLayout = new ListViewStaggeredLayout();
+          staggeredLayout.spanCount = this.nColMin;
+          staggeredLayout.scrollDirection = "Vertical";
+          this.radList.listViewLayout = staggeredLayout;
+      } else {
+          let staggeredLayout = new ListViewStaggeredLayout();
+          staggeredLayout.spanCount = this.nColMax;
+          staggeredLayout.scrollDirection = "Vertical";
+          this.radList.listViewLayout = staggeredLayout;
+      }      
     }
 
     private clearCurrent() {
@@ -173,7 +237,7 @@ export class GalleryComponent {
 
       // string sanitize
       let pathsan = this.util.replaceAll(path, "&", "%26");      
-      let url = this.host+"/index.php/apps/gallery/api/files/list?location="+pathsan+"&mediatypes=image/jpeg;image/gif;image/png&features=&etag";
+      let url = this.host+"/index.php/apps/gallery/api/files/list?location="+pathsan+"&mediatypes=image/jpeg;image/gif;image/png;image/x-xbitmap;image/bmp&features=&etag";
       this.util.log("GET list", null);
 
       // try from cache first
@@ -273,7 +337,7 @@ export class GalleryComponent {
             this.cache.images[this.cache.currentAlbum.nodeid].totAlbums = totAlbums;
             this.cache.images[this.cache.currentAlbum.nodeid].data = data;
             //this.util.log("Set Album Cache", this.cache.images[this.cache.currentAlbum.nodeid]);
-            this.util.log("Set Album Cache this.cache.currentAlbum.nodeid", null);
+            this.util.log("Set Album Cache: " + this.cache.currentAlbum.nodeid, null);
 
             this.updateFooter(totAlbums, 0);
             this.loader.hideLoader();
@@ -389,31 +453,6 @@ export class GalleryComponent {
       this.footer += (numAlbums>0 && numFiles>0)? " / " : "";
       this.footer += footerFiles;
       this.util.log("updateFooter", this.footer);
-    }
-    
-    ngOnInit() {
-      this.page.actionBarHidden = false;
-      this.util.log("Page Init Gallery", null);      
-
-      if (application.android) {
-        application.android.on(
-            AndroidApplication.activityBackPressedEvent, 
-            (data: AndroidActivityBackPressedEventData) => {
-                data.cancel = true; // prevents default back button behavior
-                this.back();
-            } 
-        );       
-      }
-
-      /*
-      applicationOn(resumeEvent, (args: ApplicationEventData)=> {
-          this.loadGallery({path: this.path, nodeid: this.nodeid});
-      });   
-      */ 
-    }
-
-    ngAfterViewInit() {
-        
     }
 
     onTapFolder(item) {

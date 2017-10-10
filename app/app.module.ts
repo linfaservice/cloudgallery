@@ -25,6 +25,7 @@ import * as Settings from "application-settings";
 import * as utf8 from "utf8";
 import * as  Base64 from "base-64"; 
 import Monitor from "./common/monitor";
+import { TranslateService } from "ng2-translate";
 
 export function createTranslateLoader(http: Http) {
     return new TranslateStaticLoader(http, '/i18n', '.json');
@@ -76,6 +77,7 @@ export class AppModule {
     page:Page,
     private loader: Loader,
     private util: Util, 
+    private translate: TranslateService,
   )  {
     /*
     setCurrentOrientation("portrait", function() {        
@@ -115,7 +117,7 @@ export class AppModule {
     this.util.log("Username", username);
     this.util.log("Password", (password==null||password=="")? password:"*****");
 
-    let monitor = new Monitor(new Loader());
+    let monitor = new Monitor(this.loader, this.translate);
     monitor.startPingAlive("https://www.linfaservice.it");        
 
     if(this.isWellConfigured(host, username, password)) this.util.navigate("");
