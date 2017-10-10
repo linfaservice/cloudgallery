@@ -86,7 +86,10 @@ export class SettingsComponent {
     } 
 
     private link() {
-      util.openUrl("https://www.operweb.com/nextcloud-gallery/");
+      this.util.log("Open link for language: ", this.translate.currentLang);
+      let link = "https://www.operweb.com/nextcloud-gallery-en/";
+      if(this.translate.currentLang=="it") link = "https://www.operweb.com/nextcloud-gallery/";
+      util.openUrl(link);
     }
 
 
