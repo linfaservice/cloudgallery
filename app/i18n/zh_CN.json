@@ -1,7 +1,7 @@
 {
-    "Loading albums...": "正在加载相册...",
-    "Loading images...": "正在加载图片...",
-    "Loading image...": "载入图片...",
+    "Loading albums…": "载入专辑......",
+    "Loading images…": "载入图片......",
+    "Loading image…": "载入图片......",
     "Error loading. Please retry": "加载错误。 请重试",
     "Share": "共享",
     "Collections": "集合",
@@ -19,7 +19,7 @@
     "Save": "保存",
     "Photo": "照片",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "你需要一个Nextcloud帐户吗？ 点击这里查看Cloud Gallery的无限空间",
-    "Nextcloud address must start with https://": "Nextcloud address must start with https://",
-    "Checking for internet connection...": "Checking for internet connection...",
-    "Checking connection...": "Checking connection..."
+    "Nextcloud address must start with https://": "Nextcloud 地址必须以 https:// 开头",
+    "Checking for internet connection…": "检查网络连接......",
+    "Checking connection…": "检查连接......"
 }
