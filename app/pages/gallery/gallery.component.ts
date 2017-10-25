@@ -36,7 +36,7 @@ elementRegistryModule.registerElement("CardView", () => require("nativescript-ca
   styleUrls: ["pages/gallery/gallery.css"],
   providers: [ModalDialogService]
 })
-
+ 
 
 export class GalleryComponent {
 
@@ -50,6 +50,7 @@ export class GalleryComponent {
     private headers;
 
     private radList: RadListView;
+    private orientation;
     private nColMin;
     private nColMax;
 
@@ -86,7 +87,9 @@ export class GalleryComponent {
       let nCol2 = Math.floor(screen.mainScreen.widthDIPs/320)*3;
       if(nCol1>nCol2) { this.nColMax=nCol1; this.nColMin=nCol2}
       else { this.nColMax=nCol2; this.nColMin=nCol1}
-
+      
+      this.util.log("Responsive columns: ", this.nColMax + " or " + this.nColMin);
+              
       appversion.getVersionName().then((v: string)=> {
           this.version = "Version " + v;
       });
@@ -102,7 +105,7 @@ export class GalleryComponent {
         this.headers = { 
           "OCS-APIREQUEST": "true",
           "Authorization": "Basic "+Base64.encode(this.username+':'+this.password)
-        }            
+        }    
 
         this.cache.images = new Array<GalleryItem>();
         this.home();
@@ -111,19 +114,21 @@ export class GalleryComponent {
 
     onRadListLoaded(args) {
       this.radList = <RadListView>args.object;  
-      let staggeredLayout = new ListViewStaggeredLayout();
+      this.util.log("View Size: " + this.radList.getMeasuredWidth() + "x" + this.radList.getMeasuredHeight(), null);
 
       this.util.log("Initial screen orientation: ", screen.mainScreen.widthDIPs + "x" + screen.mainScreen.heightDIPs);
       if(screen.mainScreen.widthDIPs>screen.mainScreen.heightDIPs) {
-        this.setOrientation({newValue: "landscape"});
+        this.orientation = "landscape";
       } else {
-        this.setOrientation({newValue: "portrait"});
-      }     
+        this.orientation = "portrait";
+      }  
+      this.updateView();   
     }
 
     ngOnInit() {
       this.page.actionBarHidden = false;
-      this.util.log("Page Init Gallery", null);      
+      this.util.log("Page Init Gallery", null); 
+      this.updateView();      
 
       if (application.android) {
         application.android.on(
@@ -141,25 +146,32 @@ export class GalleryComponent {
       });   
       */ 
 
-      applicationOn("orientationChanged", (e)=>{ this.setOrientation(e); });   
+      applicationOn("orientationChanged", (e)=>{ 
+        this.orientation = e.newValue;
+        this.updateView(); 
+      });   
     }
 
     ngOnDestroy() {
-      applicationOff("orientationChanged", this.setOrientation);
+      applicationOff("orientationChanged", this.updateView);
     }    
  
-    setOrientation(e) {
-      this.util.log("Set orientation: ", e.newValue);
-      if(e.newValue == "portrait") {
-          let staggeredLayout = new ListViewStaggeredLayout();
-          staggeredLayout.spanCount = this.nColMin;
-          staggeredLayout.scrollDirection = "Vertical";
-          this.radList.listViewLayout = staggeredLayout;
-      } else {
-          let staggeredLayout = new ListViewStaggeredLayout();
-          staggeredLayout.spanCount = this.nColMax;
-          staggeredLayout.scrollDirection = "Vertical";
-          this.radList.listViewLayout = staggeredLayout;
+    updateView() {
+      try {
+        this.util.log("Update view on orientation: ", this.orientation);
+        if(this.orientation == "portrait") {
+            let staggeredLayout = new ListViewStaggeredLayout();
+            staggeredLayout.spanCount = this.nColMin;
+            staggeredLayout.scrollDirection = "Vertical";
+            this.radList.listViewLayout = staggeredLayout;
+        } else {
+            let staggeredLayout = new ListViewStaggeredLayout();
+            staggeredLayout.spanCount = this.nColMax;
+            staggeredLayout.scrollDirection = "Vertical";
+            this.radList.listViewLayout = staggeredLayout;
+        }      
+      } catch(e) {
+        this.util.log("Error update view", e);
       }      
     }
 
@@ -170,6 +182,7 @@ export class GalleryComponent {
     }  
 
     private home() {
+      this.util.log("home", null);
       this.cache.history = new Array();
       this.cache.currentAlbum.path = this.rootdir; 
       this.cache.currentAlbum.nodeid = "/";
@@ -213,8 +226,8 @@ export class GalleryComponent {
     private loadGallery(item) {
        
       this.loader.showLoader(this.translate.instant("Loading albums…"));
-      //this.util.log("Load Gallery", item); 
-      this.util.log("Load Gallery", null); 
+      this.util.log("Load Gallery", item); 
+      //this.util.log("Load Gallery", null); 
 
       let path = item.path;
       let nodeid = item.nodeid;
@@ -236,8 +249,10 @@ export class GalleryComponent {
       this.progressVal = 0;
 
       // string sanitize
-      let pathsan = this.util.replaceAll(path, "&", "%26");      
+      let pathsan = this.util.replaceAll(path, "&", "%26"); 
+      pathsan = this.util.replaceAll(pathsan, " ", "%20");       
       let url = this.host+"/index.php/apps/gallery/api/files/list?location="+pathsan+"&mediatypes=image/jpeg;image/gif;image/png;image/x-xbitmap;image/bmp&features=&etag";
+
       this.util.log("GET list", null);
 
       // try from cache first
@@ -276,7 +291,7 @@ export class GalleryComponent {
               data = response.content.toJSON();
             } catch(e) {
               Toast.makeText(this.translate.instant("Error loading. Please retry")).show();
-              this.util.log("Error", e);
+              this.util.log("Error loading data", e);
               this.loader.hideLoader();
               return;              
             }
@@ -340,53 +355,64 @@ export class GalleryComponent {
             this.util.log("Set Album Cache: " + this.cache.currentAlbum.nodeid, null);
 
             this.updateFooter(totAlbums, 0);
-            this.loader.hideLoader();
+            this.updateView(); 
             this.scanImages(data.files, nodeid);
- 
+
           }, (e)=> {
               Toast.makeText(this.translate.instant("Error loading. Please retry")).show();
-              this.util.log("Error", e);
+              this.util.log("Error Http", e);
+              console.log(e);
               this.loader.hideLoader();
               return;
           }); 
       }
 
-      this.cache.history.push({path: this.cache.currentAlbum.path, nodeid: this.cache.currentAlbum.nodeid});
-
+      this.cache.history.push({path: this.cache.currentAlbum.path, nodeid: this.cache.currentAlbum.nodeid}); 
     }
 
     private scanImages(files, nodeid) {
-      // checks for available images
-      let toShowLoader = false;
-      let totFiles = 0;
-      let totAlbums = this.cache.images[this.cache.currentAlbum.nodeid].totAlbums;
+      try {
+        // checks for available images
+        let toShowLoader = false;
+        let totFiles = 0;
+        let totAlbums = this.cache.images[this.cache.currentAlbum.nodeid].totAlbums;
 
-      for(let i in files) {
-        let filepath = "";
-        let filepath_chunk = files[i].path.split("/");
-        for(let c=0; c<filepath_chunk.length-1; c++) {
-          filepath += filepath_chunk[c] + "/"
+        for(let i in files) {
+          let filepath = "";
+          let filepath_chunk = files[i].path.split("/");
+
+          for(let c=0; c<filepath_chunk.length-1; c++) {
+            filepath += filepath_chunk[c] + "/"
+          }
+
+          if(filepath==this.cache.currentAlbum.path+"/") {
+            totFiles++;
+            toShowLoader = true;
+          }
         }
-        if(filepath==this.cache.currentAlbum.path+"/") {
-          totFiles++;
-          toShowLoader = true;
+        
+        if(toShowLoader) {
+          this.loader.showLoader(this.translate.instant("Loading images…"));          
+          this.progressNum = 0;
+          this.progressTot = totFiles;
+          this.progressVal = 0;
+
+          this.updateFooter(totAlbums, totFiles);
+
+        } else {
+          this.loader.hideLoader();
         }
-      }
+        
+        for(let i in files) { 
+          this.imageScanner = timer.setTimeout(
+            ()=> { this.loadImages(nodeid, files[files.length-1-(+i)]) }, 
+            200*(+i));
+        }  
 
-      if(toShowLoader) {
-        this.loader.showLoader(this.translate.instant("Loading images…"));
-        this.progressNum = 0;
-        this.progressTot = totFiles;
-        this.progressVal = 0;
-
-        this.updateFooter(totAlbums, totFiles);
-      } 
-
-      for(let i in files) { 
-        this.imageScanner = timer.setTimeout(
-          ()=> { this.loadImages(nodeid, files[files.length-1-(+i)]) }, 
-          300*(+i));
-      }       
+      } catch(e) {
+        this.util.log("Error scan images", e);
+        Toast.makeText(this.translate.instant("Error loading. Please retry")).show();
+      }     
     }
 
     private loadImages(albumid, item) {
@@ -429,10 +455,10 @@ export class GalleryComponent {
                   this.util.log("File added to "+albumid+" (" + item.nodeid + ") - " + item.mtime, null);
                 })
                 .catch((error)=> {
-                  this.util.log("error", error);
+                  this.util.log("Error toImage", error);
                 });  
 
-				// hide the loader when first image in directory is loaded
+				      // hide the loader when first image in directory is loaded
               this.loader.hideLoader();
             }
 
@@ -478,7 +504,7 @@ export class GalleryComponent {
       this.modalService.showModal(ImageModalComponent, options)
       .then((result: any) => {      
       });
-    }
+    } 
 
     sendLog() {
       if(this.util.DEBUG && this.util.LOGTOSETTINGS) {

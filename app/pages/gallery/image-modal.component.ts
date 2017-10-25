@@ -1,5 +1,5 @@
 import { Page } from "ui/page";
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ElementRef, ViewChild } from "@angular/core";
 import { Util } from "../../common/util";
 import { ModalDialogParams } from "nativescript-angular/directives/dialogs";
 import Loader from "../../common/loader";
@@ -13,7 +13,9 @@ import * as Settings from "application-settings";
 import * as  Base64 from "base-64";
 import { TNSFontIconService } from 'nativescript-ngx-fonticon';
 
- 
+import {registerElement} from "nativescript-angular/element-registry";
+registerElement("Slide", () => require("nativescript-slides").Slide);
+registerElement("SlideContainer", () => require("nativescript-slides").SlideContainer);
  
 @Component({
   selector: "imagemodal",
@@ -35,6 +37,12 @@ export class ImageModalComponent {
   private item; 
   private loader;
 
+  private message_class = "";
+
+
+  private images = [];
+  @ViewChild("slides") slides: ElementRef;
+  
   public constructor(
     private params: ModalDialogParams, 
     private page: Page,
@@ -63,10 +71,35 @@ export class ImageModalComponent {
   }
  
   ngOnInit() {    
+    this.buildSlider();  
   }    
+
+  buildSlider() {
+    this.images.push(
+      {
+          title: 'image 1',
+          source: 'data:image/jpg;base64,' + this.item.src
+      }
+    );
+    this.images.push(
+        {
+            title: 'image 2',
+            source: 'data:image/jpg;base64,' + this.item.src
+        }
+    );
+    this.images.push(
+        {
+            title: 'image 3',
+            source: 'data:image/jpg;base64,' + this.item.src
+        }
+    );    
+  }
 
   ngAfterViewInit() {  
     this.loader.hideLoader();
+
+    //let SlidesXml = this.slides.nativeElement;
+    //SlidesXml.constructView();    
 
     // load high resolution image in background
     //console.log("Image Loading: " + this.item.url + "/500/500");
@@ -84,6 +117,8 @@ export class ImageModalComponent {
               let highsrc = base64;
               this.item.src = highsrc;
               this.item.loaded = true;
+
+              this.images[0].src = highsrc;
             })
             .catch((error)=> {
               //util.log("error", error);
@@ -116,5 +151,11 @@ export class ImageModalComponent {
 
     SocialShare.shareImage(image, this.translate.instant("Share") + " " + item.title);  
   }
+
+  onSwipe(args) { 
+    this.util.log("Message", "swipe " + args.direction);
+    if(args.direction==1) this.message_class = "swipe_out_right";
+    if(args.direction==2) this.message_class = "swipe_out_left";
+  }   
  
 }

@@ -1,3 +1,4 @@
+import * as application from "application";
 import { Page } from "ui/page";
 import { Component, OnInit } from "@angular/core";
 import { Util } from "../../common/util";
@@ -11,7 +12,6 @@ import * as Http from "tns-core-modules/http"
 import * as  Base64 from "base-64";
 import Loader from "../../common/loader";
 
-
   
 @Component({
   selector: "settings",
@@ -23,6 +23,9 @@ import Loader from "../../common/loader";
 
 export class SettingsComponent {
  
+    public isAndroid: boolean;
+    public isIos: boolean;
+
     private language;
 
     private host;
@@ -46,6 +49,13 @@ export class SettingsComponent {
     }
 
     private ngOnInit() {
+      if (application.ios) {
+        this.isAndroid = false;
+        this.isIos = true;
+      } else if (application.android) {
+          this.isAndroid = true;
+          this.isIos = false;
+      }      
       this.page.actionBarHidden = true;
     }    
  
@@ -77,7 +87,7 @@ export class SettingsComponent {
         
         this.tryConnection(this.host, this.username, this.password, ()=> {
           this.loader.hideLoader();
-          this.util.navigate("");
+          this.util.navigate(""); 
         });
 
       } else {
@@ -90,6 +100,7 @@ export class SettingsComponent {
       let link = "https://www.operweb.com/nextcloud-gallery-en/";
       if(this.translate.currentLang=="it") link = "https://www.operweb.com/nextcloud-gallery/";
       util.openUrl(link);
+      this.util.log("Link", link);
     }
 
 

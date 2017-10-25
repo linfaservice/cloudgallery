@@ -37,7 +37,7 @@
 .loading3 {
     width:8;
     height:8;
-    margin-right:10;
+    margin-right:30;
     background-color:#eee;
     animation-name: fadeIn;
     animation-duration: 2s;
@@ -55,4 +55,8 @@
     border-width: 1;
     background-color: #ccc;
     border-radius: 50;
+}
+
+#slide-container {
+    height: 500;
 }

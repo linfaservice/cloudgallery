@@ -32,7 +32,7 @@
         </DockLayout>
 
         <GridLayout tkExampleTitle tkToggleNavButton dock="top">
-            <RadListView id="galleryView" class="gallery-container"
+            <RadListView width="100%" height="100%" id="galleryView" class="gallery-container"
                 [items]="current" (loaded)="onRadListLoaded($event)" >
                 <ng-template tkListItemTemplate let-item="item">
                     <StackLayout orientation="vertical">

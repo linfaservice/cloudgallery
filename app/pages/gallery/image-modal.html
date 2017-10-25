@@ -1,26 +1,38 @@
 
 <StackLayout id="main"> 
 
-    <Image 
+    <!--Image 
+        [class]="message_class"
         [src]="'data:image/jpg;base64,'+item.src"
-        (tap)="close()"> 
-    </Image>
-    <DockLayout stretchLast="true">
-        <StackLayout dock="right" *ngIf="!item.loaded" orientation="horizontal">
-            <Label class="loading1"></Label>
-            <Label class="loading2"></Label>
-            <Label class="loading3"></Label>
-        </StackLayout>
-        <StackLayout dock="right" *ngIf="item.loaded" orientation="horizontal">
-            <Label 
-                class="fa btn-share"
-                text="{{'fa-share-alt' | fonticon}}"  
-                (tap)="onTap(item)"
-                (touch)="util.onTouchEffect($event)">
-            </Label>
-        </StackLayout>        
-        <Label dock="left" class="label" [text]="item.title"></Label>
-    </DockLayout>
+        (tap)="close()"
+        (swipe)="onSwipe($event)" > 
+    </Image-->
+
+    <SlideContainer angular="true" #slides id="slide-container">
+        <Slide *ngFor="let item of images">
+            <DockLayout stretchLast="true">
+                <DockLayout dock="bottom" stretchLast="true">
+                    <StackLayout dock="right" *ngIf="!item.loaded" orientation="horizontal">
+                        <Label class="loading1"></Label>
+                        <Label class="loading2"></Label>
+                        <Label class="loading3"></Label>
+                    </StackLayout>
+                    <StackLayout dock="right" *ngIf="item.loaded" orientation="horizontal">
+                        <Label 
+                            class="fa btn-share"
+                            text="{{'fa-share-alt' | fonticon}}"  
+                            (tap)="onTap(item)"
+                            (touch)="util.onTouchEffect($event)">
+                        </Label>
+                    </StackLayout>        
+                    <Label dock="left" class="label" [text]="item.title"></Label>
+                </DockLayout>                 
+                <Image dock="top"
+                    [src]="item.source" >
+                </Image> 
+            </DockLayout>          
+        </Slide>
+    </SlideContainer>  
 
     <!--Button #btn_close
         class="button"

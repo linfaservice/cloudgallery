@@ -1,12 +1,17 @@
 <DockLayout id="main">
 
     <StackLayout dock="bottom">
-        <Button
+        <Button *ngIf="isAndroid"
             [text]="'Save' | translate" 
             class="submit-button" 
-            (tap)="save()"
-            (touch)="util.onTouchEffect($event)">
+            (touch)="util.onTouchEffect($event)"
+            (tap)="save()">
         </Button>  
+        <Button *ngIf="isIos"
+            [text]="'Save' | translate" 
+            class="submit-button" 
+            (tap)="save()">
+        </Button>         
 
         <Label 
             class="link"
