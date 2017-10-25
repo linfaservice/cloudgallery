@@ -1,7 +1,7 @@
 {
-    "Loading albums...": "Ladataan albumeja...",
-    "Loading images...": "Ladataan kuvia...",
-    "Loading image...": "Ladataan kuvaa...",
+    "Loading albums…": "Ladataan albumeita…",
+    "Loading images…": "Ladataan kuvia…",
+    "Loading image…": "Ladataan kuvaa…",
     "Error loading. Please retry": "Virhe ladattaessa. Yritä uudelleen",
     "Share": "Jaa",
     "Collections": "Kokoelmat",
@@ -19,7 +19,7 @@
     "Save": "Tallenna",
     "Photo": "Kuva",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Tarvitsetko Nextcloud-tilin? Napsauta tästä saadaksesi rajattomasti tilaa pilvigalleriasta",
-    "Nextcloud address must start with https://": "Nextcloud address must start with https://",
-    "Checking for internet connection...": "Checking for internet connection...",
-    "Checking connection...": "Checking connection..."
+    "Nextcloud address must start with https://": "Nextcloud-osoitteen alussa tulee olla https://",
+    "Checking for internet connection…": "Tarkistetaan internetyhteyttä…",
+    "Checking connection…": "Tarkistetaan yhteyttä…"
 }
