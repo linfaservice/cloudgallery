@@ -5,11 +5,6 @@ import * as platform from "platform";
 import * as application from "application";
 import { ActivityIndicator } from "tns-core-modules/ui/activity-indicator";
 import * as dialogs from "ui/dialogs";
-//var dialog = require("nativescript-dialog");
-
-//declare var UIActivityIndicatorView;
-//declare var UIActivityIndicatorViewStyle;
-//declare var android;
 
 @Injectable()
 export default class Loader {

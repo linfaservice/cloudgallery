@@ -1,5 +1,5 @@
 import { Page } from "ui/page";
-import { Component, OnInit, ViewContainerRef } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { Util } from "../../common/util";
 import Loader from "../../common/loader";
 import { GalleryItem } from "../../common/gallery.item";
@@ -7,8 +7,6 @@ import GalleryCache from "../../common/gallery.cache";
 import * as Toast from 'nativescript-toast';
 import { TNSFontIconService } from 'nativescript-ngx-fonticon';
 import { ObservableArray } from "tns-core-modules/data/observable-array";
-import { ModalDialogService } from "nativescript-angular/modal-dialog";
-import { ImageModalComponent } from "./image-modal.component";
 import * as ImageSourceModule from "image-source";
 import * as Http from "tns-core-modules/http"
 import { RadListView, ListViewStaggeredLayout } from "nativescript-telerik-ui-pro/listview"
@@ -34,7 +32,7 @@ elementRegistryModule.registerElement("CardView", () => require("nativescript-ca
   selector: "gallery",
   templateUrl: "pages/gallery/gallery.html",
   styleUrls: ["pages/gallery/gallery.css"],
-  providers: [ModalDialogService]
+  providers: [Util]
 })
  
 
@@ -69,17 +67,15 @@ export class GalleryComponent {
     private progressTot = 0;
     private progressVal = 0;
     private footer = "";
-    private loader = new Loader();
     private imageScanner;
 
     public constructor(
       private page: Page,
 	    private util: Util,
       private fonticon: TNSFontIconService,
-      private modalService: ModalDialogService, 
-      private vcRef: ViewContainerRef,
       private translate: TranslateService,
-      private cache: GalleryCache
+      private cache: GalleryCache,
+      private loader: Loader    
     )  {
 
       //calc dimensions for responsive view
@@ -107,7 +103,7 @@ export class GalleryComponent {
           "Authorization": "Basic "+Base64.encode(this.username+':'+this.password)
         }    
 
-        this.cache.images = new Array<GalleryItem>();
+        this.cache.items = new Array<GalleryItem>();
         this.home();
       });
     }
@@ -193,25 +189,27 @@ export class GalleryComponent {
     }
 
     private back() {
-      if(this.cache.history.length>1) {
-        let current = this.cache.history.pop();
-        let back = this.cache.history.pop();
-        this.loadGallery(back); 
-      } else {
-        let options = {
-            title: this.translate.instant("Exit?"),
-            message: this.translate.instant("Are you sure you want to exit?"),
-            okButtonText: this.translate.instant("Yes"),
-            cancelButtonText: this.translate.instant("No")
-        };
+      if(this.util.getCurrentRoute()!="/imager") {
+        if(this.cache.history.length>1) {
+          let current = this.cache.history.pop();
+          let back = this.cache.history.pop();
+          this.loadGallery(back); 
+        } else {
+          let options = {
+              title: this.translate.instant("Exit?"),
+              message: this.translate.instant("Are you sure you want to exit?"),
+              okButtonText: this.translate.instant("Yes"),
+              cancelButtonText: this.translate.instant("No")
+          };
 
-        this.util.log("Back confirm exit?", null); 
-        confirm(options).then((result: boolean) => {
-            this.util.log("Back", result);          
-            if(result) {
-              this.util.exit();
-            }
-        });        
+          this.util.log("Back confirm exit?", null); 
+          confirm(options).then((result: boolean) => {
+              this.util.log("Back", result);          
+              if(result) {
+                this.util.exit();
+              }
+          });        
+        }
       }
     }
 
@@ -232,8 +230,8 @@ export class GalleryComponent {
       let path = item.path;
       let nodeid = item.nodeid;
 
-      if(this.cache.images[nodeid]==null) {
-        this.cache.images[nodeid] = new GalleryItem();
+      if(this.cache.items[nodeid]==null) {
+        this.cache.items[nodeid] = new GalleryItem();
       }
 
       this.clearCurrent();
@@ -246,6 +244,7 @@ export class GalleryComponent {
       this.cache.currentAlbum.title = path_chunk[path_chunk.length-1];
       this.cache.currentAlbum.title = (this.cache.currentAlbum.title=="")? this.host.split("//")[1] : this.cache.currentAlbum.title;
 
+      this.progressNum = 0;
       this.progressVal = 0;
 
       // string sanitize
@@ -258,24 +257,45 @@ export class GalleryComponent {
       // try from cache first
       //this.util.log("Get Album Cache", this.cache.images[this.cache.currentAlbum.nodeid]);
       this.util.log("Get Album Cache: " + this.cache.currentAlbum.nodeid, null);
-      if(this.cache.images[this.cache.currentAlbum.nodeid].loaded) {
+      if(this.cache.items[this.cache.currentAlbum.nodeid].isAlbum
+        && this.cache.items[this.cache.currentAlbum.nodeid].loaded) {
         
         this.util.log("Cache Found! Retrieving from cache", null);
-        for(let a in this.cache.images[this.cache.currentAlbum.nodeid].items) {
-          let item = this.cache.images[this.cache.currentAlbum.nodeid].items[a];
-          //this.util.log("Cache album added", item);
-          this.util.log("Cache album added: " + a, null);
-          this.current.push(item);
+        for(let a in this.cache.items[this.cache.currentAlbum.nodeid].items) {
+          let item = this.cache.items[this.cache.currentAlbum.nodeid].items[a];
+          if(item.isAlbum) {
+            //this.util.log("Cache album added", item); 
+            this.util.log("Cache album added: " + a, null);
+            this.current.push(item);
+          }
         }
-        this.updateFooter(this.cache.images[this.cache.currentAlbum.nodeid].totAlbums, 0);
-        let data = this.cache.images[this.cache.currentAlbum.nodeid].data;
+
+        // reverse order
+        let cacheImagesIndex = [];
+        for(let a in this.cache.items[this.cache.currentAlbum.nodeid].items) {
+          cacheImagesIndex.push(a);
+        }
+        cacheImagesIndex.reverse()
+        for(let b in cacheImagesIndex) {
+          let item = this.cache.items[this.cache.currentAlbum.nodeid].items[cacheImagesIndex[b]];
+          if(!item.isAlbum) {
+            //this.util.log("Cache image added", item); 
+            this.util.log("Cache image added: " + b, null);
+            this.current.push(item);
+            this.progressNum++;
+          }
+        }         
+        this.updateFooter(this.cache.items[this.cache.currentAlbum.nodeid].totAlbums, this.cache.items[this.cache.currentAlbum.nodeid].totImages);
+        let data = this.cache.items[this.cache.currentAlbum.nodeid].data;
 
         // otherwise too fast :)
         timer.setTimeout(()=> { 
           this.loader.hideLoader(); 
           this.scanImages(data.files, nodeid);
-        }, 800);
+        }, 800); 
 
+        this.progressVal = 100;
+ 
       } else {
 
         this.util.log("Cache Not Found :( Retrieving from cloud…", null);
@@ -335,10 +355,10 @@ export class GalleryComponent {
                   // excludes more levels albums
                 } else {
                   this.current.push(albumObj);
-                  if(this.cache.images[this.cache.currentAlbum.nodeid].items==null) {
-                    this.cache.images[this.cache.currentAlbum.nodeid].items = new Array<GalleryItem>();
+                  if(this.cache.items[this.cache.currentAlbum.nodeid].items==null) {
+                    this.cache.items[this.cache.currentAlbum.nodeid].items = new Array<GalleryItem>();
                   }
-                  this.cache.images[this.cache.currentAlbum.nodeid].items.push(albumObj);
+                  this.cache.items[this.cache.currentAlbum.nodeid].items.push(albumObj);
                   totAlbums++;
                   //this.util.log("Album added to "+nodeid+":", albumObj);
                   this.util.log("Album added to "+nodeid, null);
@@ -348,9 +368,11 @@ export class GalleryComponent {
               this.progressVal = (this.progressNum*100)/this.progressTot;
             } 
             this.progressVal = 100;
-            this.cache.images[this.cache.currentAlbum.nodeid].loaded = true;
-            this.cache.images[this.cache.currentAlbum.nodeid].totAlbums = totAlbums;
-            this.cache.images[this.cache.currentAlbum.nodeid].data = data;
+            this.cache.items[this.cache.currentAlbum.nodeid].isAlbum = true;
+            this.cache.items[this.cache.currentAlbum.nodeid].loaded = true;
+            this.cache.items[this.cache.currentAlbum.nodeid].totAlbums = totAlbums;
+            this.cache.items[this.cache.currentAlbum.nodeid].data = data;
+            this.cache.currentAlbum.totAlbums = totAlbums;
             //this.util.log("Set Album Cache", this.cache.images[this.cache.currentAlbum.nodeid]);
             this.util.log("Set Album Cache: " + this.cache.currentAlbum.nodeid, null);
 
@@ -367,7 +389,11 @@ export class GalleryComponent {
           }); 
       }
 
-      this.cache.history.push({path: this.cache.currentAlbum.path, nodeid: this.cache.currentAlbum.nodeid}); 
+      let historyItem = new GalleryItem();
+      historyItem.isAlbum = true;
+      historyItem.path = this.cache.currentAlbum.path;
+      historyItem.nodeid = this.cache.currentAlbum.nodeid;
+      this.cache.history.push(historyItem); 
     }
 
     private scanImages(files, nodeid) {
@@ -375,11 +401,15 @@ export class GalleryComponent {
         // checks for available images
         let toShowLoader = false;
         let totFiles = 0;
-        let totAlbums = this.cache.images[this.cache.currentAlbum.nodeid].totAlbums;
+        let totAlbums = this.cache.items[nodeid].totAlbums;
+
+        this.cache.currentAlbum.items = new Array<GalleryItem>();
 
         for(let i in files) {
+          let lastIndex = files.length-1-(+i);
+
           let filepath = "";
-          let filepath_chunk = files[i].path.split("/");
+          let filepath_chunk = files[lastIndex].path.split("/");
 
           for(let c=0; c<filepath_chunk.length-1; c++) {
             filepath += filepath_chunk[c] + "/"
@@ -387,13 +417,27 @@ export class GalleryComponent {
 
           if(filepath==this.cache.currentAlbum.path+"/") {
             totFiles++;
-            toShowLoader = true;
+
+            if(this.cache.items[nodeid]==null ||
+              this.cache.items[nodeid].items==null ||
+              this.cache.items[nodeid].items[files[lastIndex].nodeid]==null ||
+              !this.cache.items[nodeid].items[files[lastIndex].nodeid].loaded) { 
+              
+              toShowLoader = true;
+
+            } else {
+              let imgObj = this.cache.items[nodeid].items[files[lastIndex].nodeid];
+              this.cache.currentAlbum.items.push(imgObj); 
+            }
           }
         }
+
+        this.cache.items[nodeid].totImages = totFiles;
+        this.cache.currentAlbum.totImages = totFiles;
         
         if(toShowLoader) {
           this.loader.showLoader(this.translate.instant("Loading images…"));          
-          this.progressNum = 0;
+          //this.progressNum = 0;
           this.progressTot = totFiles;
           this.progressVal = 0;
 
@@ -404,9 +448,17 @@ export class GalleryComponent {
         }
         
         for(let i in files) { 
-          this.imageScanner = timer.setTimeout(
-            ()=> { this.loadImages(nodeid, files[files.length-1-(+i)]) }, 
-            200*(+i));
+          let lastIndex = files.length-1-(+i);
+
+          if(this.cache.items[nodeid]==null ||
+            this.cache.items[nodeid].items==null ||
+            this.cache.items[nodeid].items[files[lastIndex].nodeid]==null ||
+            !this.cache.items[nodeid].items[files[lastIndex].nodeid].loaded) { 
+
+            this.imageScanner = timer.setTimeout(
+              ()=> { this.loadImages(nodeid, files[lastIndex]) }, 
+              200*(+i));
+          }
         }  
 
       } catch(e) {
@@ -441,14 +493,19 @@ export class GalleryComponent {
                   imgObj.title = filepath_chunk[filepath_chunk.length-1];
                   imgObj.url = imgurlroot;
                   imgObj.mtime = item.mtime;
+                  imgObj.loaded = true;
 
                   this.current.push(imgObj);
-                  /*
-                  if(this.cache.images[this.cache.currentAlbum.nodeid].images==null) {
-                    this.cache.images[this.cache.currentAlbum.nodeid].images = new Array<GalleryItem>();
+                  
+                  if(this.cache.currentAlbum.items==null) {
+                    this.cache.currentAlbum.items = new Array<GalleryItem>();
                   }
-                  this.cache.images[this.cache.currentAlbum.nodeid].images[item.nodeid] = imgObj;
-                  */
+                  this.cache.currentAlbum.items.push(imgObj);                  
+
+                  if(this.cache.items[this.cache.currentAlbum.nodeid].items==null) {
+                    this.cache.items[this.cache.currentAlbum.nodeid].items = new Array<GalleryItem>();
+                  }
+                  this.cache.items[this.cache.currentAlbum.nodeid].items[item.nodeid] = imgObj;
                   this.progressNum++;
                   this.progressVal = (this.progressNum*100)/this.progressTot;
                   //this.util.log("file added to "+albumid+": ", "(" + item.nodeid + ") " + item.path + " - " + item.mtime);
@@ -490,20 +547,9 @@ export class GalleryComponent {
     onTapImage(item) {
       //this.util.log("tap", item.title);
       this.util.log("Tap item image", null);
+      this.cache.currentImage = item;
       this.loader.showLoader(this.translate.instant("Loading image…")); 
-
-      let options = {
-          context: {
-            loader: this.loader,
-            item: item
-          },
-          fullscreen: false,
-          viewContainerRef: this.vcRef
-      };
-
-      this.modalService.showModal(ImageModalComponent, options)
-      .then((result: any) => {      
-      });
+      this.util.navigate("imager");
     } 
 
     sendLog() {

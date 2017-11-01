@@ -47,8 +47,7 @@ export default class Monitor {
         }
     }
 
-    public startPingAlive(site) {
-        //setInterval(()=>this.pingAlive(site), 3000);       
+    public startPingAlive(site) {      
         this.pingAlive(site);
     }    
 }

@@ -114,9 +114,12 @@ export class Util {
         );          
     }
 
+    public getCurrentRoute() {
+        return this.route.url;
+    }
+
     /* handle android back button */
     public navigateBack() {
-        this.log("Navigate back", this.route.url);
         if(this.route.url!="/root/(rootoutlet:login)" &&
             this.route.url!="/base/(baseoutlet:home)") {
                 this.router.back();

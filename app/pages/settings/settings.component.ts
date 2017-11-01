@@ -22,7 +22,7 @@ import Loader from "../../common/loader";
 
 
 export class SettingsComponent {
- 
+
     public isAndroid: boolean;
     public isIos: boolean;
 
@@ -39,8 +39,9 @@ export class SettingsComponent {
       private page: Page,
 	    private util: Util,
       private fonticon: TNSFontIconService,
-      private translate: TranslateService
+      private translate: TranslateService, 
     )  {
+
       this.util.log("Page Init", "Settings");
 
       this.language = Platform.device.language;

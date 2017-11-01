@@ -13,7 +13,6 @@ import { setCurrentOrientation , orientationCleanup } from "nativescript-screen-
 import { TNSFontIconModule } from 'nativescript-ngx-fonticon';
 import * as application from "application";
 import { AndroidApplication, AndroidActivityBackPressedEventData } from "application";
-import { ImageModalComponent } from "./pages/gallery/image-modal.component";
 import { routes, navigatableComponents } from "./app.routing";
 import { Http } from "@angular/http";
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from "ng2-translate";
@@ -33,11 +32,10 @@ export function createTranslateLoader(http: Http) {
 @NgModule({
   declarations: [
     AppModule,
-    ImageModalComponent,
     ...navigatableComponents
   ],
   entryComponents: [
-    ImageModalComponent
+
   ],
   imports: [
     NativeScriptModule,

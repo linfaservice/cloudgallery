@@ -1,28 +1,26 @@
+<ActionBar title="">
+    <DockLayout stretchLast="true">      
+        <Label dock="left"
+            class="fa actionbar-icon actionbar-icon-left"
+            text="{{'fa-angle-left' | fonticon}}" 
+            (tap)="back()"
+            (touch)="util.onTouchEffect($event)" >
+        </Label>   
+        <Label class="header" [text]="cache.currentImage.title" ></Label> 
+    </DockLayout>
+</ActionBar>
+
 <StackLayout id="main"> 
-
-    <ActionBar title="">
-        <DockLayout stretchLast="true">      
-            <Label dock="left"
-                class="fa actionbar-icon actionbar-icon-left"
-                text="{{'fa-angle-left' | fonticon}}" 
-                (tap)="close()"
-                (touch)="util.onTouchEffect($event)" >
-            </Label>   
-            <Label class="header" [text]="item.title" ></Label> 
-        </DockLayout>
-    </ActionBar>
         
-    <!--Image 
-        [class]="message_class"
-        [src]="'data:image/jpg;base64,'+item.src"
-        (tap)="close()"
-        (swipe)="onSwipe($event)" > 
-    </Image-->
+    <SlideContainer #slideContainer class="slide-container animation"
+        angular="true"
+        loop="true"
+        pageIndicators="false" 
+        (changed)="onSwipe()">
 
-    <SlideContainer angular="true" #slides id="slide-container">
         <Slide *ngFor="let item of images">
-            <DockLayout stretchLast="true">
-                <DockLayout dock="bottom" stretchLast="true">
+            <DockLayout stretchLast="true" class="slide">
+                <DockLayout dock="bottom" stretchLast="true" class="bottombar">
                     <StackLayout dock="right" *ngIf="!item.loaded" orientation="horizontal">
                         <Label class="loading1"></Label>
                         <Label class="loading2"></Label>
@@ -39,7 +37,7 @@
                     <Label dock="left" class="label" [text]="item.title"></Label>
                 </DockLayout>                 
                 <Image dock="top"
-                    [src]="item.source" >
+                    [src]="'data:image/jpg;base64,'+item.src" >
                 </Image> 
             </DockLayout>          
         </Slide>

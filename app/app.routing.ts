@@ -2,10 +2,13 @@ import { RootComponent } from "./pages/_root/_root.component";
 import { BaseComponent } from "./pages/_base/_base.component";
 import { GalleryComponent } from "./pages/gallery/gallery.component";
 import { SettingsComponent } from "./pages/settings/settings.component";
+import { ImagerComponent } from "./pages/imager/imager.component";
 
 
 export const routes = [
   { path: '', component: GalleryComponent },
+  { path: 'gallery', component: GalleryComponent },  
+  { path: 'imager', component: ImagerComponent },
   { path: 'settings', component: SettingsComponent },
   /*
   { path: 'root', component: RootComponent, children: [
@@ -22,5 +25,6 @@ export const navigatableComponents = [
   //BaseComponent,
   SettingsComponent,
   GalleryComponent,
+  ImagerComponent
 ]; 
  

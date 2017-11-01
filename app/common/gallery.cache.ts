@@ -5,8 +5,17 @@ import { GalleryItem } from "./gallery.item";
 @Injectable()
 export default class GalleryCache {
 
-    public images = new Array<GalleryItem>();
-    public currentAlbum = new GalleryItem();  
-    public history = new Array();    
+    public items:Array<GalleryItem>;
+    public currentAlbum:GalleryItem; 
+    public currentImage:GalleryItem;  
+    public history:Array<GalleryItem>;    
     
+    constructor() {
+        this.items = new Array<GalleryItem>();
+        this.currentAlbum = new GalleryItem(); 
+        this.currentAlbum.isAlbum = true;
+        this.currentImage = new GalleryItem();  
+        this.currentImage.isAlbum = false;
+        this.history = new Array<GalleryItem>();
+    }
 }

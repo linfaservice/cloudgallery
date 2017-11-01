@@ -1,7 +1,8 @@
 import { Page } from "ui/page";
 import { Component, OnInit, ElementRef, ViewChild } from "@angular/core";
+import * as application from "application";
+import { AndroidApplication, AndroidActivityBackPressedEventData } from "application";
 import { Util } from "../../common/util";
-import { ModalDialogParams } from "nativescript-angular/directives/dialogs";
 import Loader from "../../common/loader";
 import * as Toast from 'nativescript-toast';
 import * as Http from "tns-core-modules/http";
@@ -12,20 +13,22 @@ import { TranslateService } from "ng2-translate";
 import * as Settings from "application-settings";
 import * as  Base64 from "base-64";
 import { TNSFontIconService } from 'nativescript-ngx-fonticon';
+import { GalleryItem } from "../../common/gallery.item";
+import GalleryCache from "../../common/gallery.cache";
 
 import {registerElement} from "nativescript-angular/element-registry";
 registerElement("Slide", () => require("nativescript-slides").Slide);
 registerElement("SlideContainer", () => require("nativescript-slides").SlideContainer);
- 
+  
 @Component({
-  selector: "imagemodal",
-  templateUrl: "pages/gallery/image-modal.html",
-  styleUrls: ["pages/gallery/image-modal.css"],
+  selector: "imager",
+  templateUrl: "pages/imager/imager.html",
+  styleUrls: ["pages/imager/imager.css"],
   providers: []
 })
 
 
-export class ImageModalComponent {
+export class ImagerComponent {
 
   private language;
   private host;
@@ -34,22 +37,18 @@ export class ImageModalComponent {
   private rootdir;
   private headers;  
 
-  private item; 
-  private loader;
+  public images: Array<any> = [];
 
-  private message_class = "";
-
-
-  private images = [];
-  @ViewChild("slides") slides: ElementRef;
+  @ViewChild("slideContainer") slideContainerView: ElementRef;
   
   public constructor(
-    private params: ModalDialogParams, 
     private page: Page,
     private translate: TranslateService,
     private fonticon: TNSFontIconService,
-    private util: Util
-  )  {
+    private util: Util,
+    private cache: GalleryCache,
+    private loader: Loader
+  )  { 
 
     this.language = Platform.device.language;
     this.translate.setDefaultLang("en");
@@ -64,47 +63,64 @@ export class ImageModalComponent {
       "OCS-APIREQUEST": "true",
       "Authorization": "Basic "+Base64.encode(this.username+':'+this.password)
     } 
-
-    this.item = params.context.item;
-    this.loader = params.context.loader;
    
   }
  
   ngOnInit() {    
-    this.page.actionBarHidden = false;
-    this.buildSlider();  
+    this.page.actionBarHidden = false;       
+    this.buildSlider();
+
+    if (application.android) {
+      application.android.on(
+          AndroidApplication.activityBackPressedEvent, 
+          (data: AndroidActivityBackPressedEventData) => {
+              data.cancel = true; // prevents default back button behavior
+              this.back();
+          } 
+      );       
+    }
+
+    // search position of selected image
+    let k = 0;
+    let currentImageIndex = 0;
+    let currentImageUrl = this.cache.currentImage.url;
+    for(let i in this.cache.currentAlbum.items) {
+      let img = this.cache.currentAlbum.items[i];
+      if(img.url==currentImageUrl) {
+        currentImageIndex = k;
+        break;
+      }
+      k++;
+    }
+ 
+    setTimeout(()=>{ 
+      let slideContainer = this.slideContainerView.nativeElement;
+      slideContainer.constructView();    
+      slideContainer.goToSlide(currentImageIndex);
+    }, 10);     
   }    
 
-  buildSlider() {
-    this.images.push(
-      {
-          title: 'image 1',
-          source: 'data:image/jpg;base64,' + this.item.src
-      }
-    );
-    this.images.push(
-        {
-            title: 'image 2',
-            source: 'data:image/jpg;base64,' + this.item.src
-        }
-    );
-    this.images.push(
-        {
-            title: 'image 3',
-            source: 'data:image/jpg;base64,' + this.item.src
-        }
-    );    
+  back() { 
+    this.util.navigateBack();
   }
 
-  ngAfterViewInit() {  
-    this.loader.hideLoader();
+  
+  buildSlider() {
+    for(let i in this.cache.currentAlbum.items) {
+      let image = this.cache.currentAlbum.items[i];
+      this.images.push(image);
+    }       
+  }
+   
+  
 
-    //let SlidesXml = this.slides.nativeElement;
-    //SlidesXml.constructView();    
+  ngAfterViewInit() {       
+    this.loader.hideLoader();
 
     // load high resolution image in background
     //console.log("Image Loading: " + this.item.url + "/500/500");
 
+    /*
     if(!this.item.loaded) {
       Http.request({
           url: this.item.url + "/500/500",
@@ -129,34 +145,17 @@ export class ImageModalComponent {
           //Toast.makeText("Si è verificato un problema durante il caricamento dell'immagine ad alta risoluzione").show();
       });       
     }
+    */
   }
 
-  public close() {
-      this.params.closeCallback({
-        "close": true
-      }); 
-  }
-
-  public onTouchEffect(e) {
-      if(e.type="tap" && e.action=="down") { 
-          e.view.style.opacity = "0.5"; 
-      } 
-      if(e.type="tap" && e.action=="up") { 
-          e.view.style.opacity = "1"; 
-      }       
-  }  
-
-  onTap(item) {
+  onTap(item) { 
     let image = new ImageSource();
     image.loadFromBase64(item.src);
-
     SocialShare.shareImage(image, this.translate.instant("Share") + " " + item.title);  
-  }
+  } 
 
-  onSwipe(args) { 
-    this.util.log("Message", "swipe " + args.direction);
-    if(args.direction==1) this.message_class = "swipe_out_right";
-    if(args.direction==2) this.message_class = "swipe_out_left";
-  }   
+  onSwipe(event, item) {
+    this.util.log("onSlide", event);
+  }
  
 }
