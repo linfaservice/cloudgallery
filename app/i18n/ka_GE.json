@@ -1,7 +1,7 @@
 {
-    "Loading albums…": "ალბომების ჩატვირთვა...",
-    "Loading images…": "სურათების ჩატვირთვა...",
-    "Loading image…": "სურათის ჩატვირთვა...",
+    "Loading albums…": "ალბომების ჩატვირთვა…",
+    "Loading images…": "სურათების ჩატვირთვა…",
+    "Loading image…": "სურათის ჩატვირთვა…",
     "Error loading. Please retry": "ჩატვირთვისას წარმოიშვა შეცდომა. სცადეთ ახლიდან",
     "Share": "გაზიარება",
     "Collections": "კოლექციები",
@@ -9,7 +9,7 @@
     "Error connecting. Please check parameters": "კავშირისას წარმოიშვა შეცდომა. გთხოვთ შეამოწმოთ პარამეტრები",
     "Error loading. Please exit and reconfigure": "ჩატვირთვისას წარმოიშვა შეცდომა. გთხოვთ გახვიდეთ და მოახდინოთ რეკონფიგურაცია",
     "Exit?": "გავიდეთ?",
-    "Are you sure you want to exit?": "დარწმუნებული ხართ რო გსურთ გასვლა?",
+    "Are you sure you want to exit?": "დარწმუნებული ხართ, რომ გსურთ გასვლა?",
     "Yes": "კი",
     "No": "არა",
     "Nextcloud server address": "Nextcloud-ის სერვერის მისამართი",
@@ -17,9 +17,9 @@
     "Password": "პაროლი",
     "Main folder": "მთავარი დირექტორია",
     "Save": "შენახვა",
-    "Photo": "ოტო",
+    "Photo": "ფოტო",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "გესაჭიროებათ Nextcloud ანგარიში? Cloud Gallery-ის ულიმიტო მოცულობისთვის დააწკაპუნეთ აქ",
     "Nextcloud address must start with https://": "Nextcloud-ის მისამართი უნდა იწყებოდეს https://-ით",
-    "Checking for internet connection…": "ინტერნეტ კავშირის შემოწმება...",
-    "Checking connection…": "კავშირის შემოწმება..."
+    "Checking for internet connection…": "ინტერნეტ კავშირის შემოწმება…",
+    "Checking connection…": "კავშირის შემოწმება…"
 }
