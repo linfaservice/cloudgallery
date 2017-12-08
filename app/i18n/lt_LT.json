@@ -1,7 +1,7 @@
 {
-    "Loading albums...": "Įkeliami albumai...",
-    "Loading images...": "Įkeliami paveikslai...",
-    "Loading image...": "Įkeliamas paveikslas...",
+    "Loading albums…": "Loading albums…",
+    "Loading images…": "Loading images…",
+    "Loading image…": "Loading image…",
     "Error loading. Please retry": "Klaida, įkeliant. Bandykite dar kartą",
     "Share": "Share",
     "Collections": "Kolekcijos",
@@ -20,6 +20,6 @@
     "Photo": "Nuotrauka",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery",
     "Nextcloud address must start with https://": "Nextcloud address must start with https://",
-    "Checking for internet connection...": "Checking for internet connection...",
-    "Checking connection...": "Checking connection..."
+    "Checking for internet connection…": "Checking for internet connection…",
+    "Checking connection…": "Checking connection…"
 }

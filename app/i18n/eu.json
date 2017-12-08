@@ -1,7 +1,7 @@
 {
-    "Loading albums...": "Albumak kargatzen...",
-    "Loading images...": "Irudiak kargatzen...",
-    "Loading image...": "Irudia kargatzen...",
+    "Loading albums…": "Loading albums…",
+    "Loading images…": "Loading images…",
+    "Loading image…": "Loading image…",
     "Error loading. Please retry": "Errorea kargatzen. Mesedez, saiatu berriz",
     "Share": "Partekatu",
     "Collections": "Bildumak",
@@ -20,6 +20,6 @@
     "Photo": "Argazkia",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery",
     "Nextcloud address must start with https://": "Nextcloud address must start with https://",
-    "Checking for internet connection...": "Checking for internet connection...",
-    "Checking connection...": "Checking connection..."
+    "Checking for internet connection…": "Checking for internet connection…",
+    "Checking connection…": "Checking connection…"
 }

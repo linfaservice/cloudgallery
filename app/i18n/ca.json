@@ -1,7 +1,7 @@
 {
-    "Loading albums...": "S'estan carregant els àlbums...",
-    "Loading images...": "S'estan carregant les imatges...",
-    "Loading image...": "S'estan carregant la imatge...",
+    "Loading albums…": "Loading albums…",
+    "Loading images…": "Loading images…",
+    "Loading image…": "Loading image…",
     "Error loading. Please retry": "Error al carregar. Intenteu-ho de nou.",
     "Share": "Comparteix",
     "Collections": "Col·leccions",
@@ -20,6 +20,6 @@
     "Photo": "Fotografia",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Necessites un compte de Nextcloud? Prem aquí per espai il·limitat per a una Cloud Gallery",
     "Nextcloud address must start with https://": "Nextcloud address must start with https://",
-    "Checking for internet connection...": "Checking for internet connection...",
-    "Checking connection...": "Checking connection..."
+    "Checking for internet connection…": "Checking for internet connection…",
+    "Checking connection…": "Checking connection…"
 }

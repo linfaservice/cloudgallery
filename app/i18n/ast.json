@@ -1,7 +1,7 @@
 {
-    "Loading albums...": "Cargando álbumes...",
-    "Loading images...": "Cargando imáxenes...",
-    "Loading image...": "Cargando imaxe...",
+    "Loading albums…": "Loading albums…",
+    "Loading images…": "Loading images…",
+    "Loading image…": "Loading image…",
     "Error loading. Please retry": "Fallu na carga. Volvi tentalo, por favor",
     "Share": "Compartir",
     "Collections": "Coleiciones",
@@ -20,6 +20,6 @@
     "Photo": "Semeya",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "¿Precises una cuenta de Nextcloud? Primi equí pa espaciu ensin llende pa la galería na ñube",
     "Nextcloud address must start with https://": "Nextcloud address must start with https://",
-    "Checking for internet connection...": "Checking for internet connection...",
-    "Checking connection...": "Checking connection..."
+    "Checking for internet connection…": "Checking for internet connection…",
+    "Checking connection…": "Checking connection…"
 }
