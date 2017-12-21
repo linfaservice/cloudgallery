@@ -13,13 +13,13 @@
     "Yes": "Ναι",
     "No": "Όχι",
     "Nextcloud server address": "Nextcloud server address",
-    "Username": "Username",
-    "Password": "Password",
-    "Main folder": "Main folder",
-    "Save": "Save",
-    "Photo": "Photo",
-    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery",
-    "Nextcloud address must start with https://": "Nextcloud address must start with https://",
-    "Checking for internet connection…": "Checking for internet connection…",
-    "Checking connection…": "Checking connection…"
+    "Username": "Όνομα Χρήστη",
+    "Password": "Συνθηματικό",
+    "Main folder": "Κύριος Φάκελος",
+    "Save": "Αποθήκευση",
+    "Photo": "Φωτογραφία",
+    "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Χρειάζεστε έναν λογαριασμό Nextcloud; Κάντε κλικ εδώ για απεριόριστο χώρο για το Cloud Gallery",
+    "Nextcloud address must start with https://": "Η διεύθυνση του Nextcloud πρέπει να ξεκινά με https://",
+    "Checking for internet connection…": "Έλεγχος για σύνδεση διαδικτύου...",
+    "Checking connection…": "Έλεγχος σύνδεσης..."
 }
