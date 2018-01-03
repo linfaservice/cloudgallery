@@ -36,3 +36,8 @@ and the `run` command to run Cloud Gallery:
 ```
 $ tns run android
 ```
+
+## Donation
+If you like Cloud Gallery and want to speed up development please consider to offer a small donation. Thanks!
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/linfaservice)
