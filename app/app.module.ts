@@ -11,7 +11,6 @@ import { NativeScriptUICalendarModule } from "nativescript-telerik-ui-pro/calend
 import { DropDownModule } from "nativescript-drop-down/angular";
 import { setCurrentOrientation , orientationCleanup } from "nativescript-screen-orientation"
 import { TNSFontIconModule } from 'nativescript-ngx-fonticon';
-import { MaskedTextFieldModule } from "nativescript-masked-text-field/angular";
 import * as application from "application";
 import { AndroidApplication, AndroidActivityBackPressedEventData } from "application";
 import { ImageModalComponent } from "./pages/gallery/image-modal.component";
@@ -51,7 +50,6 @@ export function createTranslateLoader(http: Http) {
     NativeScriptUIChartModule,
     NativeScriptUICalendarModule,
     DropDownModule,
-    MaskedTextFieldModule,
     TNSFontIconModule.forRoot({
 		  'fa': './css/font-awesome.css',
 		  /* 'ion': './css/ionicons.css' */

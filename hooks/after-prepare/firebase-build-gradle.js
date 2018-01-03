@@ -9,14 +9,21 @@ module.exports = function() {
     if (fs.existsSync(buildGradlePath)) {
         var buildGradleContent = fs.readFileSync(buildGradlePath).toString();
 
-        // already at 3.1.0?
-        if (buildGradleContent.indexOf('classpath "com.google.gms:google-services:3.1.0"') != -1) {
+        // already at 3.1.1?
+        if (buildGradleContent.indexOf('classpath "com.google.gms:google-services:3.1.1"') != -1) {
             return;
         }
 
-        // upgrade 3.0.0 to 3.1.0?
+        // upgrade 3.1.0 to 3.1.1?
+        if (buildGradleContent.indexOf('classpath "com.google.gms:google-services:3.1.0"') != -1) {
+            buildGradleContent = buildGradleContent.replace('classpath "com.google.gms:google-services:3.1.0"', 'classpath "com.google.gms:google-services:3.1.1"');
+            fs.writeFileSync(buildGradlePath, buildGradleContent);
+            return;
+        }
+
+        // upgrade 3.0.0 to 3.1.1?
         if (buildGradleContent.indexOf('classpath "com.google.gms:google-services:3.0.0"') != -1) {
-            buildGradleContent = buildGradleContent.replace('classpath "com.google.gms:google-services:3.0.0"', 'classpath "com.google.gms:google-services:3.1.0"');
+            buildGradleContent = buildGradleContent.replace('classpath "com.google.gms:google-services:3.0.0"', 'classpath "com.google.gms:google-services:3.1.1"');
             fs.writeFileSync(buildGradlePath, buildGradleContent);
             return;
         }
@@ -38,7 +45,7 @@ module.exports = function() {
             return;
         }
 
-        buildGradleContent = buildGradleContent.substr(0, search - 1) + '    classpath "com.google.gms:google-services:3.0.0"\n    ' + buildGradleContent.substr(search - 1);
+        buildGradleContent = buildGradleContent.substr(0, search - 1) + '    classpath "com.google.gms:google-services:3.1.1"\n    ' + buildGradleContent.substr(search - 1);
 
         fs.writeFileSync(buildGradlePath, buildGradleContent);
     }

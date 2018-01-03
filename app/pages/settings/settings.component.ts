@@ -10,6 +10,7 @@ import { TranslateService } from "ng2-translate";
 import * as Http from "tns-core-modules/http"
 import * as  Base64 from "base-64";
 import Loader from "../../common/loader";
+import * as email from "nativescript-email";
 
 
   
@@ -58,9 +59,12 @@ export class SettingsComponent {
       if(this.host==null || this.host=="") return false;
       if(this.username==null || this.username=="") return false;
       if(this.password==null || this.password=="") return false;
-      if(!this.host.startsWith("https://")) {
-        Toast.makeText(this.translate.instant("Nextcloud address must start with https://")).show();
+      if(!this.host.startsWith("http://") && !this.host.startsWith("https://")) {
+        Toast.makeText(this.translate.instant("Nextcloud address must start with https:// or http://")).show();
         return false;
+      }
+      if(this.host.startsWith("http://")) {
+        Toast.makeText(this.translate.instant("Connection is not secure. Please configure your server on https")).show();
       }
 
       //if(!okLogin()) configured = false;
@@ -86,10 +90,22 @@ export class SettingsComponent {
     } 
 
     private link() {
+      /*
       this.util.log("Open link for language: ", this.translate.currentLang);
       let link = "https://www.operweb.com/nextcloud-gallery-en/";
       if(this.translate.currentLang=="it") link = "https://www.operweb.com/nextcloud-gallery/";
       util.openUrl(link);
+      */
+      email.compose({
+        subject: "Request for Cloud Gallery unlimited",
+        body: "Hello, I'm interested to obtain unlimited space for Cloud Gallery. Thanks",
+        to: ['helpdesk@linfaservice.it']
+      }).then(
+        function() {
+          this.util.log("Email compose for Cloud Gallery unlimited request", "Email composer closed");
+        }, function(err) {
+          this.util.log("Email compose error", err);
+      });      
     }
 
 
