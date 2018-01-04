@@ -19,7 +19,8 @@
     "Save": "Desa",
     "Photo": "Fotografia",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Necessites un compte de Nextcloud? Prem aquí per espai il·limitat per a una Cloud Gallery",
-    "Nextcloud address must start with https://": "Nextcloud address must start with https://",
+    "Nextcloud address must start with https:// or http://": "Nextcloud address must start with https:// or http://",
+    "Connection is not secure. Please configure your server on https": "Connection is not secure. Please configure your server on https",
     "Checking for internet connection…": "Checking for internet connection…",
     "Checking connection…": "Checking connection…"
 }

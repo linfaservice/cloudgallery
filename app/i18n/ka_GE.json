@@ -19,7 +19,8 @@
     "Save": "შენახვა",
     "Photo": "ფოტო",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "გესაჭიროებათ Nextcloud ანგარიში? Cloud Gallery-ის ულიმიტო მოცულობისთვის დააწკაპუნეთ აქ",
-    "Nextcloud address must start with https://": "Nextcloud-ის მისამართი უნდა იწყებოდეს https://-ით",
+    "Nextcloud address must start with https:// or http://": "Nextcloud address must start with https:// or http://",
+    "Connection is not secure. Please configure your server on https": "Connection is not secure. Please configure your server on https",
     "Checking for internet connection…": "ინტერნეტ კავშირის შემოწმება…",
     "Checking connection…": "კავშირის შემოწმება…"
 }

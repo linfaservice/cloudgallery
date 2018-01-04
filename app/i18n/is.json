@@ -19,7 +19,8 @@
     "Save": "Vista",
     "Photo": "Ljósmynd",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Vantar þig Nextcloud-aðgang? Smelltu hér til að fá ótakmarkað geymslupláss á ljósmyndaskýi",
-    "Nextcloud address must start with https://": "Nextcloud-vistfang verður að byrja á https://",
+    "Nextcloud address must start with https:// or http://": "Nextcloud address must start with https:// or http://",
+    "Connection is not secure. Please configure your server on https": "Connection is not secure. Please configure your server on https",
     "Checking for internet connection…": "Athuga með internettengingu...",
     "Checking connection…": "Athuga með tengingu..."
 }

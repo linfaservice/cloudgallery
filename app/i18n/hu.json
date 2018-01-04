@@ -19,7 +19,8 @@
     "Save": "Mentés",
     "Photo": "Fotó",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Szükséged van egy Nextcloud fiókra? Kattints ide korlátlan tárterületért a Cloud Gallery-hez",
-    "Nextcloud address must start with https://": "A Nextcloud cím https://-el kell kezdődjön",
+    "Nextcloud address must start with https:// or http://": "Nextcloud address must start with https:// or http://",
+    "Connection is not secure. Please configure your server on https": "Connection is not secure. Please configure your server on https",
     "Checking for internet connection…": "Internet kapcsolat ellenőrzése…",
     "Checking connection…": "Kapcsolat ellenőrzése…"
 }
