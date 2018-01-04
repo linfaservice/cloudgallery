@@ -19,7 +19,8 @@
     "Save": "Αποθήκευση",
     "Photo": "Φωτογραφία",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Χρειάζεστε έναν λογαριασμό Nextcloud; Κάντε κλικ εδώ για απεριόριστο χώρο για το Cloud Gallery",
-    "Nextcloud address must start with https://": "Η διεύθυνση του Nextcloud πρέπει να ξεκινά με https://",
+    "Nextcloud address must start with https:// or http://": "Nextcloud address must start with https:// or http://",
+    "Connection is not secure. Please configure your server on https": "Connection is not secure. Please configure your server on https",
     "Checking for internet connection…": "Έλεγχος για σύνδεση διαδικτύου...",
     "Checking connection…": "Έλεγχος σύνδεσης..."
 }

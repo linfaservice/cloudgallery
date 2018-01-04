@@ -19,7 +19,8 @@
     "Save": "儲存",
     "Photo": "照片",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "你需要一個Nextcloud帳號？點此獲得無限空間的Cloud Gallery",
-    "Nextcloud address must start with https://": "nextcloud的位址必須是https://開頭",
+    "Nextcloud address must start with https:// or http://": "Nextcloud address must start with https:// or http://",
+    "Connection is not secure. Please configure your server on https": "Connection is not secure. Please configure your server on https",
     "Checking for internet connection…": "檢查網路連線",
     "Checking connection…": "檢查連線"
 }

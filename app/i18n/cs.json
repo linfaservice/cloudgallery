@@ -19,7 +19,8 @@
     "Save": "Uložit",
     "Photo": "Fotka",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Potřebujete účet Nextcloud? Klikněte zde pro neomezený prostor Cloud Gallery",
-    "Nextcloud address must start with https://": "Nextcloud adresa musí začínat https://",
+    "Nextcloud address must start with https:// or http://": "Nextcloud address must start with https:// or http://",
+    "Connection is not secure. Please configure your server on https": "Connection is not secure. Please configure your server on https",
     "Checking for internet connection…": "Kontrola připojení k internetu...",
     "Checking connection…": "Kontrola připojení..."
 }

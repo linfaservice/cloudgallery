@@ -19,7 +19,8 @@
     "Save": "Gem",
     "Photo": "Foto",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Har du brug for en Nextcloud konto? Klik her for at få ubegrænset plads til Cloud Gallery",
-    "Nextcloud address must start with https://": "Nextcloud addresse skal starte med https://",
+    "Nextcloud address must start with https:// or http://": "Nextcloud address must start with https:// or http://",
+    "Connection is not secure. Please configure your server on https": "Connection is not secure. Please configure your server on https",
     "Checking for internet connection…": "Tjekker efter internetforbindelse...",
     "Checking connection…": "Tjekker internetforbindelsen..."
 }

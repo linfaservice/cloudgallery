@@ -19,7 +19,8 @@
     "Save": "Speichern",
     "Photo": "Foto",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Brauchst du ein Nextcloud Nutzerkonto? Klicke hier für unbegrenzten Speicherplatz für Cloud Gallery",
-    "Nextcloud address must start with https://": "Die Nextcloud-Adresse muss mit https:// beginnen",
+    "Nextcloud address must start with https:// or http://": "Nextcloud address must start with https:// or http://",
+    "Connection is not secure. Please configure your server on https": "Connection is not secure. Please configure your server on https",
     "Checking for internet connection…": "Prüfe die Internetverbindung...",
     "Checking connection…": "Prüfe die Verbindung..."
 }
