@@ -22,5 +22,10 @@
     "Nextcloud address must start with https://": "L'indirizzo di Nextcloud deve iniziare con https:// o con http://",
     "Connection is not secure. Please configure your server on https": "La connessione non è sicura. Configurare il server in https",    
     "Checking for internet connection…": "Controllo della connessione a Internet...",
-    "Checking connection…": "Controllo della connessione in corso..."
+    "Checking connection…": "Controllo della connessione in corso...",
+    "Do you like Cloud Gallery?": "Ti piace Cloud Gallery?",
+    "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!": "Cloud Gallery è un progetto open source e il tuo aiuto può contribuire allo sviluppo. Se ti piace Cloud Gallery considera la possibilità di offrire una donazione. Grazie!",
+    "Donate": "Fai una donazione",
+    "Close and not remember": "Chiudi e non ricordare",
+    "Remember later": "Ricorda più tardi"    
 }

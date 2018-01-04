@@ -24,12 +24,14 @@ import { AndroidApplication, AndroidActivityBackPressedEventData } from "applica
 import { confirm } from "ui/dialogs";
 import * as appversion from "nativescript-appversion"; 
 import * as email from "nativescript-email";
-import {screen} from "tns-core-modules/platform/platform"
+import {screen} from "tns-core-modules/platform/platform";
+import * as util from "utils/utils";
 
 import * as elementRegistryModule from 'nativescript-angular/element-registry';
+import { setTimeout } from "timers";
 elementRegistryModule.registerElement("CardView", () => require("nativescript-cardview").CardView);
 
-  
+   
 @Component({
   selector: "gallery",
   templateUrl: "pages/gallery/gallery.html",
@@ -106,7 +108,7 @@ export class GalleryComponent {
 
         this.cache.images = new Array<GalleryItem>();
         this.home();
-      });
+      });     
     }
 
     onRadListLoaded(args) {
@@ -139,15 +141,15 @@ export class GalleryComponent {
       applicationOn(resumeEvent, (args: ApplicationEventData)=> {
           this.loadGallery({path: this.path, nodeid: this.nodeid});
       });   
-      */ 
+      */
 
-      applicationOn("orientationChanged", (e)=>{ this.setOrientation(e); });   
+      applicationOn("orientationChanged", (e)=>{ this.setOrientation(e); });        
     }
 
     ngOnDestroy() {
       applicationOff("orientationChanged", this.setOrientation);
     }    
- 
+
     setOrientation(e) {
       this.util.log("Set orientation: ", e.newValue);
       if(e.newValue == "portrait") {
@@ -176,7 +178,29 @@ export class GalleryComponent {
       this.loadGallery({
         path: this.cache.currentAlbum.path, 
         nodeid: this.cache.currentAlbum.nodeid
-      });
+      });         
+    }
+
+    private showDonateDialog() {
+      let donate = Settings.getString("donate");
+      
+      if(donate!="ok") {
+        confirm({
+          title: this.translate.instant("Do you like Cloud Gallery?"),
+          message: this.translate.instant("Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!"),
+          okButtonText: this.translate.instant("Donate"),
+          cancelButtonText: this.translate.instant("Close and not remember"),
+          neutralButtonText: this.translate.instant("Remember later")
+        }).then((result:boolean)=> {
+            if(result!=null) {
+              if(result) {
+                util.openUrl("https://paypal.me/linfaservice");
+              } else {
+                Settings.setString("donate", "ok");              
+              }
+            }
+        });  
+      }    
     }
 
     private back() {
@@ -206,7 +230,8 @@ export class GalleryComponent {
       Settings.setString("host", "");
       Settings.setString("username", "");
       Settings.setString("password", "");
-      Settings.setString("rootdir", "");        
+      Settings.setString("rootdir", "");     
+      Settings.setString("donate", "");     
       this.util.navigate("settings");
     }
  
@@ -297,7 +322,7 @@ export class GalleryComponent {
               Toast.makeText(this.translate.instant("Error loading. Please exit and reconfigure")).show();
               this.loader.hideLoader();
               return;
-            }
+            } 
 
             let totAlbums = 0;
             this.progressTot = albums.length;
@@ -342,6 +367,10 @@ export class GalleryComponent {
             this.updateFooter(totAlbums, 0);
             this.loader.hideLoader();
             this.scanImages(data.files, nodeid);
+
+            if(this.cache.currentAlbum.nodeid=="/") {
+              this.showDonateDialog();
+            }
  
           }, (e)=> {
               Toast.makeText(this.translate.instant("Error loading. Please retry")).show();

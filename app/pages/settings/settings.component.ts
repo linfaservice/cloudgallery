@@ -97,8 +97,8 @@ export class SettingsComponent {
       util.openUrl(link);
       */
       email.compose({
-        subject: "Request for Cloud Gallery unlimited",
-        body: "Hello, I'm interested to obtain unlimited space for Cloud Gallery. Thanks",
+        subject: this.translate.instant("Request for Cloud Gallery unlimited"),
+        body: this.translate.instant("Hello, I'm interested to obtain unlimited space for Cloud Gallery. Thanks"),
         to: ['helpdesk@linfaservice.it']
       }).then(
         function() {
