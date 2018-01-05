@@ -19,8 +19,15 @@
     "Save": "Speichern",
     "Photo": "Foto",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Brauchen Sie ein Nutzerkonto? Klicken Sie hier für unbegrenzten Speicherplatz für Cloud Gallery",
-    "Nextcloud address must start with https:// or http://": "Nextcloud address must start with https:// or http://",
-    "Connection is not secure. Please configure your server on https": "Connection is not secure. Please configure your server on https",
+    "Request for Cloud Gallery unlimited": "Request for Cloud Gallery unlimited",
+    "Hello, I'm interested to obtain unlimited space for Cloud Gallery. Thanks": "Hello, I'm interested to obtain unlimited space for Cloud Gallery. Thanks",
+    "Nextcloud address must start with https:// or http://": "Die Nextcloud-Adresse muss mit https:// oder http:// beginnen",
+    "Connection is not secure. Please configure your server on https": "Verbindung ist nicht sicher. Bitte Server auf https konfigurieren",
     "Checking for internet connection…": "Prüfe die Internetverbindung...",
-    "Checking connection…": "Prüfe die Verbindung..."
+    "Checking connection…": "Prüfe die Verbindung...",
+    "Do you like Cloud Gallery?": "Do you like Cloud Gallery?",
+    "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!": "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!",
+    "Donate": "Donate",
+    "Close and not remember": "Close and not remember",
+    "Remember later": "Remember later"
 }

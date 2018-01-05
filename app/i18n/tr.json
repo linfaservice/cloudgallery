@@ -19,8 +19,15 @@
     "Save": "Kaydet",
     "Photo": "Fotoğraf",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Bir Nextcloud hesabına mı gerek duyuyorsunuz? Sınırsız boyutlu Bulut Galerisi için buraya tıklayın",
-    "Nextcloud address must start with https:// or http://": "Nextcloud address must start with https:// or http://",
-    "Connection is not secure. Please configure your server on https": "Connection is not secure. Please configure your server on https",
+    "Request for Cloud Gallery unlimited": "Request for Cloud Gallery unlimited",
+    "Hello, I'm interested to obtain unlimited space for Cloud Gallery. Thanks": "Hello, I'm interested to obtain unlimited space for Cloud Gallery. Thanks",
+    "Nextcloud address must start with https:// or http://": "Nextcloud adresi https:// ya da http:// ile başlamalıdır",
+    "Connection is not secure. Please configure your server on https": "Bağlantı güvenli değil. Lütfen sunucunuzu https kullanacak şekilde yapılandırın",
     "Checking for internet connection…": "İnternet bağlantısı denetleniyor…",
-    "Checking connection…": "Bağlantı denetleniyor…"
+    "Checking connection…": "Bağlantı denetleniyor…",
+    "Do you like Cloud Gallery?": "Do you like Cloud Gallery?",
+    "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!": "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!",
+    "Donate": "Donate",
+    "Close and not remember": "Close and not remember",
+    "Remember later": "Remember later"
 }
