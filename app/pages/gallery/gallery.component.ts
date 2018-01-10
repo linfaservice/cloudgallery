@@ -195,8 +195,9 @@ export class GalleryComponent {
             if(result!=null) {
               if(result) {
                 util.openUrl("https://paypal.me/linfaservice");
+                Settings.setString("donate", "ok"); 
               } else {
-                Settings.setString("donate", "ok");              
+                Settings.setString("donate", "remember");              
               }
             }
         });  
