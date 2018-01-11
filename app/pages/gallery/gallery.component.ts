@@ -182,9 +182,10 @@ export class GalleryComponent {
     }
 
     private showDonateDialog() {
-      let donate = Settings.getString("donate");
+      let remember = Settings.getBoolean("remember");
+      remember = (remember!=null)? remember:true;
       
-      if(donate!="ok") {
+      if(remember) {
         confirm({
           title: this.translate.instant("Do you like Cloud Gallery?"),
           message: this.translate.instant("Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!"),
@@ -192,23 +193,21 @@ export class GalleryComponent {
           cancelButtonText: this.translate.instant("Close and not remember"),
           neutralButtonText: this.translate.instant("Remember later")
         }).then((result:boolean)=> {
-            if(result!=null) {
-              if(result) {
-                util.openUrl("https://paypal.me/linfaservice");
-                Settings.setString("donate", "ok"); 
-              } else {
-                Settings.setString("donate", "remember");              
-              }
+            if(result===undefined) {
+              Settings.setBoolean("remember", true); 
+            } else {
+              if(result) { util.openUrl("https://paypal.me/linfaservice"); } 
+              Settings.setBoolean("remember", false);              
             }
         });  
-      }    
+      }   
     }
 
     private back() {
       if(this.cache.history.length>1) {
         let current = this.cache.history.pop();
         let back = this.cache.history.pop();
-        this.loadGallery(back); 
+        this.loadGallery(back);
       } else {
         let options = {
             title: this.translate.instant("Exit?"),
