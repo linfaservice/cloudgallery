@@ -191,7 +191,7 @@ export class GalleryComponent {
           message: this.translate.instant("Cloud Gallery is a libre software project where you can help can speed up development, either directly or by offering a donation. Thanks!"),
           okButtonText: this.translate.instant("Donate"),
           cancelButtonText: this.translate.instant("Close and discard"),
-          neutralButtonText: this.translate.instant("Remember later")
+          neutralButtonText: this.translate.instant("Remember for later")
         }).then((result:boolean)=> {
             if(result===undefined) {
               Settings.setBoolean("remember", true); 
