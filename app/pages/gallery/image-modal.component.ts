@@ -90,7 +90,7 @@ export class ImageModalComponent {
             });  
 
       }, (e)=> {
-          //Toast.makeText("Si è verificato un problema durante il caricamento dell'immagine ad alta risoluzione").show();
+          //Toast.makeText("There was a problem loading the higher resolution version of the image").show();
       });       
     }
   }
