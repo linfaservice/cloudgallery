@@ -60,11 +60,11 @@ export class SettingsComponent {
       if(this.username==null || this.username=="") return false;
       if(this.password==null || this.password=="") return false;
       if(!this.host.startsWith("http://") && !this.host.startsWith("https://")) {
-        Toast.makeText(this.translate.instant("Nextcloud address must start with https:// or http://")).show();
+        Toast.makeText(this.translate.instant("Nextcloud addresses must start with https:// or http://")).show();
         return false;
       }
       if(this.host.startsWith("http://")) {
-        Toast.makeText(this.translate.instant("Connection is not secure. Please configure your server on https")).show();
+        Toast.makeText(this.translate.instant("Insecure connection. Please configure your server to use HTTPS")).show();
       }
 
       //if(!okLogin()) configured = false;
@@ -85,7 +85,7 @@ export class SettingsComponent {
         });
 
       } else {
-        Toast.makeText(this.translate.instant("Error connecting. Please check parameters")).show();
+        Toast.makeText(this.translate.instant("Error connecting. Please review relevant parameters")).show();
       }
     } 
 
@@ -98,13 +98,13 @@ export class SettingsComponent {
       */
       email.compose({
         subject: this.translate.instant("Request for Cloud Gallery unlimited"),
-        body: this.translate.instant("Hello, I'm interested to obtain unlimited space for Cloud Gallery. Thanks"),
+        body: this.translate.instant("Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks"),
         to: ['helpdesk@linfaservice.it']
       }).then(
         function() {
-          this.util.log("Email compose for Cloud Gallery unlimited request", "Email composer closed");
+          this.util.log("Compose email to request Cloud Gallery unlimited", "Email composer closed");
         }, function(err) {
-          this.util.log("Email compose error", err);
+          this.util.log("Error in email composer", err);
       });      
     }
 
@@ -130,14 +130,14 @@ export class SettingsComponent {
         try {   
           data = response.content.toJSON();
         } catch(e) {
-          Toast.makeText(this.translate.instant("Error connecting. Please check parameters")).show();
+          Toast.makeText(this.translate.instant("Error connecting. Please review relevant parameters")).show();
           this.util.log("Error", e);
           this.loader.hideLoader();
           return;              
         }
         
         if(data==null) {
-          Toast.makeText(this.translate.instant("Error connecting. Please check parameters")).show();
+          Toast.makeText(this.translate.instant("Error connecting. Please review relevant parameters")).show();
           this.util.log("Error Data null", null);
           this.loader.hideLoader();
           return;   
@@ -147,7 +147,7 @@ export class SettingsComponent {
         let albums = data.albums;  
         // error loading
         if(albums==null) {
-          Toast.makeText(this.translate.instant("Error connecting. Please check parameters")).show();
+          Toast.makeText(this.translate.instant("Error connecting. Please review relevant parameters")).show();
           this.loader.hideLoader();
           return;
         }        
@@ -155,7 +155,7 @@ export class SettingsComponent {
         callOk();
 
       }, (e)=> {
-        Toast.makeText(this.translate.instant("Error connecting. Please check parameters")).show();
+        Toast.makeText(this.translate.instant("Error connecting. Please review relevant parameters")).show();
         this.util.log("Error", e);
         this.loader.hideLoader();
         return;
