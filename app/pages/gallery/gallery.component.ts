@@ -188,9 +188,9 @@ export class GalleryComponent {
       if(remember) {
         confirm({
           title: this.translate.instant("Do you like Cloud Gallery?"),
-          message: this.translate.instant("Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!"),
+          message: this.translate.instant("Cloud Gallery is a libre software project where you can help can speed up development, either directly or by offering a donation. Thanks!"),
           okButtonText: this.translate.instant("Donate"),
-          cancelButtonText: this.translate.instant("Close and not remember"),
+          cancelButtonText: this.translate.instant("Close and discard"),
           neutralButtonText: this.translate.instant("Remember later")
         }).then((result:boolean)=> {
             if(result===undefined) {
