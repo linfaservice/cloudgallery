@@ -6,7 +6,7 @@
     "Share": "Deila",
     "Collections": "Söfn",
     "Files": "Myndir",
-    "Error connecting. Please check parameters": "Villa við tengingu. Skoðaðu stillingarnar",
+    "Please review relevant parameters": "Please review relevant parameters",
     "Error loading. Please exit and reconfigure": "Villa við hleðslu. Farðu út og skoðaðu stillingar",
     "Exit?": "Fara út?",
     "Are you sure you want to exit?": "Ertu viss um að þú viljir hætta?",
@@ -20,14 +20,14 @@
     "Photo": "Ljósmynd",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Vantar þig Nextcloud-aðgang? Smelltu hér til að fá ótakmarkað geymslupláss á ljósmyndaskýi",
     "Request for Cloud Gallery unlimited": "Beiðni um ótakmarkað Cloud Gallery ljósmyndaský",
-    "Hello, I'm interested to obtain unlimited space for Cloud Gallery. Thanks": "Sælir, ég hef áhuga á að fá ótakmarkað geymslupláss á Cloud Gallery ljósmyndaskýi. Takk fyrir",
+    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks",
     "Nextcloud address must start with https:// or http://": "Nextcloud-vistfang verður að byrja á https:// eða http://",
-    "Connection is not secure. Please configure your server on https": "Tengingin er ekki örugg. Settu þjóninn þinn upp til að nota https",
+    "Insecure connection. Please configure your server to use HTTPS": "Insecure connection. Please configure your server to use HTTPS",
     "Checking for internet connection…": "Athuga með internettengingu...",
     "Checking connection…": "Athuga með tengingu...",
     "Do you like Cloud Gallery?": "Líkar þér við Cloud Gallery ljósmyndaskýið?",
     "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!": "Cloud Gallery ljósmyndaskýið er opið og frjálst hugbúnaðarverkefni og þú getur hjálpað til við þróun þess. Ef þér líkar við Cloud Gallery skaltu íhuga að gefa einhverja upphæð til styrktar verkefninu. Takk kærlega!",
     "Donate": "Styrkja",
-    "Close and not remember": "Loka og ekki áminna",
-    "Remember later": "Áminna mig síðar"
+    "Close and discard": "Close and discard",
+    "Remember for later": "Remember for later"
 }

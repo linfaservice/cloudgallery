@@ -6,7 +6,7 @@
     "Share": "Jaa",
     "Collections": "Kokoelmat",
     "Files": "Kuvat",
-    "Error connecting. Please check parameters": "Virhe yhdistettäessä. Tarkista parametrit",
+    "Please review relevant parameters": "Please review relevant parameters",
     "Error loading. Please exit and reconfigure": "Virhe ladattaessa. Poistu ja määritä uudelleen",
     "Exit?": "Poistutaanko?",
     "Are you sure you want to exit?": "Haluatko varmasti poistua?",
@@ -20,14 +20,14 @@
     "Photo": "Kuva",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Tarvitsetko Nextcloud-tilin? Napsauta tästä saadaksesi rajattomasti tilaa pilvigalleriasta",
     "Request for Cloud Gallery unlimited": "Request for Cloud Gallery unlimited",
-    "Hello, I'm interested to obtain unlimited space for Cloud Gallery. Thanks": "Hello, I'm interested to obtain unlimited space for Cloud Gallery. Thanks",
+    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks",
     "Nextcloud address must start with https:// or http://": "Nextcloudin osoite tulee alkaa protokollalla https:// tai http://",
-    "Connection is not secure. Please configure your server on https": "Yhteys ei ole turvallinen. Määritä palvelimellesi toimiva https-yhteys",
+    "Insecure connection. Please configure your server to use HTTPS": "Insecure connection. Please configure your server to use HTTPS",
     "Checking for internet connection…": "Tarkistetaan internetyhteyttä…",
     "Checking connection…": "Tarkistetaan yhteyttä…",
     "Do you like Cloud Gallery?": "Do you like Cloud Gallery?",
     "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!": "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!",
     "Donate": "Lahjoita",
-    "Close and not remember": "Close and not remember",
-    "Remember later": "Remember later"
+    "Close and discard": "Close and discard",
+    "Remember for later": "Remember for later"
 }

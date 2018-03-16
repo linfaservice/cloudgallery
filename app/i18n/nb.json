@@ -6,7 +6,7 @@
     "Share": "Del",
     "Collections": "Samlinger",
     "Files": "Bilder",
-    "Error connecting. Please check parameters": "Feil ved tilkobling. Sjekk parameterne",
+    "Please review relevant parameters": "Please review relevant parameters",
     "Error loading. Please exit and reconfigure": "Feil ved innlasting. Avslutt og sett opp på nytt",
     "Exit?": "Avslutt?",
     "Are you sure you want to exit?": "Er du sikker på at du vil avslutte?",
@@ -20,14 +20,14 @@
     "Photo": "Bilde",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Trenger du en Nextcloud konto? Klikk her for ubegrenset lagringsplass for Skygalleriet",
     "Request for Cloud Gallery unlimited": "Forespørsel om ubegrenset Skygalleri",
-    "Hello, I'm interested to obtain unlimited space for Cloud Gallery. Thanks": "Hei, jeg er interessert i ubegrenset plass for Skygalleri. Takk",
+    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks",
     "Nextcloud address must start with https:// or http://": "Nextcloud-adressen må starte med https:// eller http://",
-    "Connection is not secure. Please configure your server on https": "Tilkoblingen er ikke sikker. Sett opp tjeneren med HTTPS",
+    "Insecure connection. Please configure your server to use HTTPS": "Insecure connection. Please configure your server to use HTTPS",
     "Checking for internet connection…": "Sjekker internettforbindelse…",
     "Checking connection…": "Sjekker tilkobling…",
     "Do you like Cloud Gallery?": "Liker du Skygalleri?",
     "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!": "Skygalleri er et friprogprosjekt der du kan hjelpe til direkte eller gjennom en donasjon. Takk.",
     "Donate": "Doner",
-    "Close and not remember": "Lukk og glem",
-    "Remember later": "Husk"
+    "Close and discard": "Close and discard",
+    "Remember for later": "Remember for later"
 }

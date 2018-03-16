@@ -6,7 +6,7 @@
     "Share": "გაზიარება",
     "Collections": "კოლექციები",
     "Files": "სურათები",
-    "Error connecting. Please check parameters": "კავშირისას წარმოიშვა შეცდომა. გთხოვთ შეამოწმოთ პარამეტრები",
+    "Please review relevant parameters": "Please review relevant parameters",
     "Error loading. Please exit and reconfigure": "ჩატვირთვისას წარმოიშვა შეცდომა. გთხოვთ გახვიდეთ და მოახდინოთ რეკონფიგურაცია",
     "Exit?": "გავიდეთ?",
     "Are you sure you want to exit?": "დარწმუნებული ხართ, რომ გსურთ გასვლა?",
@@ -20,14 +20,14 @@
     "Photo": "ფოტო",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "გესაჭიროებათ Nextcloud ანგარიში? Cloud Gallery-ის ულიმიტო მოცულობისთვის დააწკაპუნეთ აქ",
     "Request for Cloud Gallery unlimited": "მოთხოვნა Cloud Gallery ულიმიტოზე",
-    "Hello, I'm interested to obtain unlimited space for Cloud Gallery. Thanks": "გამარჯობა, დაინტერესებული ვარ Cloud Gallery-ის ულიმიტო სივრცის მიღებაში. მადლობა",
+    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks",
     "Nextcloud address must start with https:// or http://": "Nextcloud მისამართი უნდა იწყებოდეს https://-ით ან http://-თი",
-    "Connection is not secure. Please configure your server on https": "კავშირი დაუცველია. გთხოვთ გაუწიოთ თქვენს სერვერს https კონფიგურაცია",
+    "Insecure connection. Please configure your server to use HTTPS": "Insecure connection. Please configure your server to use HTTPS",
     "Checking for internet connection…": "ინტერნეტ კავშირის შემოწმება…",
     "Checking connection…": "კავშირის შემოწმება…",
     "Do you like Cloud Gallery?": "მოგწონთ Cloud Gallery?",
     "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!": "Cloud Gallery ღია კოდის ქვეშ არსებული პროექტია, თქვენმა დახმარებამ შეიძლება დააჩქაროს განვითარება. თუ მოგწონთ Cloud Gallery, გთხოვთ იფიქროთ შემოწირულობის გაკეთებაზე. მადლობა!",
     "Donate": "შემოწირულობა",
-    "Close and not remember": "დაიხუროს და არ დამახსოვრდეს",
-    "Remember later": "დამახსოვრდეს მოგვიანებით"
+    "Close and discard": "Close and discard",
+    "Remember for later": "Remember for later"
 }

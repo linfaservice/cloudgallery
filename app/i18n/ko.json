@@ -6,7 +6,7 @@
     "Share": "공유하기",
     "Collections": "모음집",
     "Files": "파일",
-    "Error connecting. Please check parameters": "연결 중 오류가 발생했습니다. 매개 변수를 확인하십시오",
+    "Please review relevant parameters": "Please review relevant parameters",
     "Error loading. Please exit and reconfigure": "불러오는 중 오류가 발생했습니다. 끝내고 다시 설정하십시오",
     "Exit?": "끝내시겠습니까?",
     "Are you sure you want to exit?": "정말로 끝내시겠습니까?",
@@ -20,14 +20,14 @@
     "Photo": "사진",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Nextcloud 계정이 필요하신가요? 여기를 누르면 무제한 용량 클라우드 갤러리를 사용할 수 있습니다",
     "Request for Cloud Gallery unlimited": "무제한 클라우드 갤러리 요청",
-    "Hello, I'm interested to obtain unlimited space for Cloud Gallery. Thanks": "안녕하세요, 무제한 용량 클라우드 갤러리에 관심 있습니다. 감사합니다",
+    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks",
     "Nextcloud address must start with https:// or http://": "Nextcloud 주소는 https:// 또는 http://로 시작해야 함",
-    "Connection is not secure. Please configure your server on https": "연결이 안전한지 않습니다. 서버를 HTTPS를 사용하도록 설정하십시오",
+    "Insecure connection. Please configure your server to use HTTPS": "Insecure connection. Please configure your server to use HTTPS",
     "Checking for internet connection…": "인터넷 연결 확인 중…",
     "Checking connection…": "연결 확인 중…",
     "Do you like Cloud Gallery?": "클라우드 갤러리를 어떻게 생각하시나요?",
     "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!": "클라우드 갤러리는 오픈 소스 프로젝트이며 여러분의 도움으로 개발을 빠르게 진행할 수 있습니다. 클라우드 갤러리가 마음에 드셨다면 기부를 생각해 주세요. 감사합니다!",
     "Donate": "기부하기",
-    "Close and not remember": "닫고 기억하지 않기",
-    "Remember later": "나중에 기억하기"
+    "Close and discard": "Close and discard",
+    "Remember for later": "Remember for later"
 }

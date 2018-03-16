@@ -6,7 +6,7 @@
     "Share": "Megosztás",
     "Collections": "Gyűjtemények",
     "Files": "Képek",
-    "Error connecting. Please check parameters": "Hiba a kapcsolódáskor. Ellenőrizd a paramétereket",
+    "Please review relevant parameters": "Please review relevant parameters",
     "Error loading. Please exit and reconfigure": "Hiba a betöltésnél. Kérlek lépj ki és állítsd be újra",
     "Exit?": "Kilépés?",
     "Are you sure you want to exit?": "Biztosan ki szeretnél lépni?",
@@ -20,14 +20,14 @@
     "Photo": "Fotó",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Szükséged van egy Nextcloud fiókra? Kattints ide korlátlan tárterületért a Cloud Gallery-hez",
     "Request for Cloud Gallery unlimited": "Korlátlan felhő galéria igénylése",
-    "Hello, I'm interested to obtain unlimited space for Cloud Gallery. Thanks": "Hello, érdekelne a korlátlan felhő galéria. Köszönöm",
+    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks",
     "Nextcloud address must start with https:// or http://": "A Nextcloud cím http:///-el vagy https://-el kell kezdődjön",
-    "Connection is not secure. Please configure your server on https": "A kapcsolat nem titkos. Kérjük kapcsolja be a https-t",
+    "Insecure connection. Please configure your server to use HTTPS": "Insecure connection. Please configure your server to use HTTPS",
     "Checking for internet connection…": "Internet kapcsolat ellenőrzése…",
     "Checking connection…": "Kapcsolat ellenőrzése…",
     "Do you like Cloud Gallery?": "Tetszik a Felhő Galéria?",
     "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!": "A Felhő Galéria egy nyílt forrású projekt és a segítséged meggyorsíthatja a fejlesztést. Ha tetszik a Felhő Galéria kérjük fontold meg a támogatást. Köszönjük!",
     "Donate": "Adományozás",
-    "Close and not remember": "Bezárás és elfelejtés",
-    "Remember later": "Emlékeztess később"
+    "Close and discard": "Close and discard",
+    "Remember for later": "Remember for later"
 }

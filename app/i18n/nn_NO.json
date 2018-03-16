@@ -6,7 +6,7 @@
     "Share": "Del",
     "Collections": "Samlingar",
     "Files": "Bilete",
-    "Error connecting. Please check parameters": "Feil under tilkobling. Kontroler parameter",
+    "Please review relevant parameters": "Please review relevant parameters",
     "Error loading. Please exit and reconfigure": "Feil under lastinga. Venligst forlat og still inn på nytt",
     "Exit?": "Forlate?",
     "Are you sure you want to exit?": "Er du sikker på at du ynskjer å forlate?",
@@ -20,14 +20,14 @@
     "Photo": "Bilete",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Treng du ein Nextcloud konto? Trykk her for ubegrensa lagring for Sky Galleri",
     "Request for Cloud Gallery unlimited": "Førespurnad om Sky Galleri ubegrensa",
-    "Hello, I'm interested to obtain unlimited space for Cloud Gallery. Thanks": "Hei, eg er interresert i å få tak i ubegrensa lagring for Sky Galleri. Takk",
+    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks",
     "Nextcloud address must start with https:// or http://": "Nextcloud adresse må state med htps:// eller http://",
-    "Connection is not secure. Please configure your server on https": "Tilkoplinga er ikkje tygg. Venligst konfigurer serveren på https",
+    "Insecure connection. Please configure your server to use HTTPS": "Insecure connection. Please configure your server to use HTTPS",
     "Checking for internet connection…": "Ser etter internett tilkopling...",
     "Checking connection…": "Sjekker tilkopling...",
     "Do you like Cloud Gallery?": "Liker du Sky Galleri?",
     "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!": "Sky Galleri er eit opent kjelde prosjekt, og din help kan hjelpe til å hurtig gjere utvilkinga. Om du liker Sky Galleri, venligst tenk over om du kan tilby ein donasjon. Takk!",
     "Donate": "Donér",
-    "Close and not remember": "Lukk og ikkje hugs",
-    "Remember later": "Hugs seinarare"
+    "Close and discard": "Close and discard",
+    "Remember for later": "Remember for later"
 }

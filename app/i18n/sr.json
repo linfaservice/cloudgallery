@@ -6,7 +6,7 @@
     "Share": "Подели",
     "Collections": "Колекције",
     "Files": "Слике",
-    "Error connecting. Please check parameters": "Грешка при повезивању. Проверите параметре",
+    "Please review relevant parameters": "Please review relevant parameters",
     "Error loading. Please exit and reconfigure": "Грешка при учитавању. Изађите и подесите поново",
     "Exit?": "Изађи?",
     "Are you sure you want to exit?": "Да ли сте сигурни да желите да изађете?",
@@ -20,14 +20,14 @@
     "Photo": "Слика",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Да ли Вам треба Некстклауд налог? Кликните овде за неограничено места за Галерију у Облаку",
     "Request for Cloud Gallery unlimited": "Захтев за неограничено места за Галерију у Облаку",
-    "Hello, I'm interested to obtain unlimited space for Cloud Gallery. Thanks": "Здраво, заинтересован сам да добијем неограничено места за Галерију у Облаку. Хвала",
+    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks",
     "Nextcloud address must start with https:// or http://": "Некстклауд адреса мора да почиње са https:// или са http://",
-    "Connection is not secure. Please configure your server on https": "Веза није безбедна. Подесите Ваш сервер преко https протокола.",
+    "Insecure connection. Please configure your server to use HTTPS": "Insecure connection. Please configure your server to use HTTPS",
     "Checking for internet connection…": "Проверавам има ли интернет конекције…",
     "Checking connection…": "Проверавам конекцију…",
     "Do you like Cloud Gallery?": "Да ли Вам се свиђа Галерија у Облаку?",
     "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!": "Галерија у Облаку је пројекат отвореног кода и Ваша помоћ може убрзати развој. Ако Вам се Галерија у Облаку свиђа, размислите о донацији. Хвала!",
     "Donate": "Донирај",
-    "Close and not remember": "Затвори и не памти",
-    "Remember later": "Запамти касније"
+    "Close and discard": "Close and discard",
+    "Remember for later": "Remember for later"
 }

@@ -6,7 +6,7 @@
     "Share": "Teilen",
     "Collections": "Sammlungen",
     "Files": "Bilder",
-    "Error connecting. Please check parameters": "Fehler beim Verbinden. Bitte prüfen Sie die Eingabe",
+    "Please review relevant parameters": "Please review relevant parameters",
     "Error loading. Please exit and reconfigure": "Fehler beim Laden. Bitte schließen und erneut konfigurieren",
     "Exit?": "Schließen?",
     "Are you sure you want to exit?": "Sind Sie sicher, dass sie die Anwendung beenden wollen?",
@@ -20,14 +20,14 @@
     "Photo": "Foto",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Brauchen Sie ein Nutzerkonto? Klicken Sie hier für unbegrenzten Speicherplatz für Cloud Gallery",
     "Request for Cloud Gallery unlimited": "Anfrage für Cloud Gallery Unlimited",
-    "Hello, I'm interested to obtain unlimited space for Cloud Gallery. Thanks": "Hallo, ich bin interessiert an unbegrenztem Speicherplatz für Cloud Gallery. Danke",
+    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks",
     "Nextcloud address must start with https:// or http://": "Die Nextcloud-Adresse muss mit https:// oder http:// beginnen",
-    "Connection is not secure. Please configure your server on https": "Verbindung ist nicht sicher. Bitte Server auf https konfigurieren",
+    "Insecure connection. Please configure your server to use HTTPS": "Insecure connection. Please configure your server to use HTTPS",
     "Checking for internet connection…": "Prüfe die Internetverbindung...",
     "Checking connection…": "Prüfe die Verbindung...",
     "Do you like Cloud Gallery?": "Mögen Sie Cloud Gallery?",
     "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!": "Cloud Gallery ist ein Open Source Projekt und Sie können die Entwicklung unterstützen. Wenn Sie Cloud Gallery mögen, so würden wir uns über eine Spende freuen. Danke!",
     "Donate": "Spenden",
-    "Close and not remember": "Schließen und nicht mehr erinnern",
-    "Remember later": "Später erinnern"
+    "Close and discard": "Close and discard",
+    "Remember for later": "Remember for later"
 }

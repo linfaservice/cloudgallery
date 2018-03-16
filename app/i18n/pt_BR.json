@@ -6,7 +6,7 @@
     "Share": "Compartilhar",
     "Collections": "Acervos",
     "Files": "Imagens",
-    "Error connecting. Please check parameters": "Erro ao conectar. Verifique os parâmetros",
+    "Please review relevant parameters": "Please review relevant parameters",
     "Error loading. Please exit and reconfigure": "Erro ao carregar. Saia e reconfigure",
     "Exit?": "Sair?",
     "Are you sure you want to exit?": "Quer realmente sair?",
@@ -20,14 +20,14 @@
     "Photo": "Foto",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Precisa de uma conta Nextcloud? Clique aqui para ter espaço ilimitado na Galeria da Nuvem",
     "Request for Cloud Gallery unlimited": "Solicitar um Cloud Gallery ilimitado",
-    "Hello, I'm interested to obtain unlimited space for Cloud Gallery. Thanks": "Olá. Estou interessando em obter um Cloud Gallery ilimitado. Obrigado",
+    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks",
     "Nextcloud address must start with https:// or http://": "O endereço Nextcloud deve iniciar com https:// ou http://",
-    "Connection is not secure. Please configure your server on https": "Esta conexão não é segura. Configure seu servidor como https",
+    "Insecure connection. Please configure your server to use HTTPS": "Insecure connection. Please configure your server to use HTTPS",
     "Checking for internet connection…": "Verificando conexão com a internet...",
     "Checking connection…": "Verificando conexão...",
     "Do you like Cloud Gallery?": "Você gosta do Cloud Gallery?",
     "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!": "Cloud Gallery é um projeto de código aberto e sua ajuda pode acelerar o desenvolvimento. Se você gostar da Cloud Gallery, considere fazer uma doação. Obrigado!",
     "Donate": "Doar",
-    "Close and not remember": "Fechar e não lembrar",
-    "Remember later": "Lembrar mais tarde"
+    "Close and discard": "Close and discard",
+    "Remember for later": "Remember for later"
 }

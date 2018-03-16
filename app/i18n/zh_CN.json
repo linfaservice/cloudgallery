@@ -6,7 +6,7 @@
     "Share": "共享",
     "Collections": "集合",
     "Files": "图片",
-    "Error connecting. Please check parameters": "连接错误 请检查参数",
+    "Please review relevant parameters": "Please review relevant parameters",
     "Error loading. Please exit and reconfigure": "错误加载。 请退出并重新配置",
     "Exit?": "推出？",
     "Are you sure you want to exit?": "你确定要离开？",
@@ -20,14 +20,14 @@
     "Photo": "照片",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "你需要一个Nextcloud帐户吗？ 点击这里查看Cloud Gallery的无限空间",
     "Request for Cloud Gallery unlimited": "Request for Cloud Gallery unlimited",
-    "Hello, I'm interested to obtain unlimited space for Cloud Gallery. Thanks": "Hello, I'm interested to obtain unlimited space for Cloud Gallery. Thanks",
+    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks",
     "Nextcloud address must start with https:// or http://": "Nextcloud 地址必须以 https:// 或者 http:// 开头",
-    "Connection is not secure. Please configure your server on https": "Connection is not secure. Please configure your server on https",
+    "Insecure connection. Please configure your server to use HTTPS": "Insecure connection. Please configure your server to use HTTPS",
     "Checking for internet connection…": "检查网络连接......",
     "Checking connection…": "检查连接......",
     "Do you like Cloud Gallery?": "你喜欢云相册？",
     "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!": "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!",
     "Donate": "捐款",
-    "Close and not remember": "关闭并且忘记",
-    "Remember later": "以后记住"
+    "Close and discard": "Close and discard",
+    "Remember for later": "Remember for later"
 }
