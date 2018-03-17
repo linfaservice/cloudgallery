@@ -6,7 +6,7 @@
     "Share": "Paylaş",
     "Collections": "Derlemeler",
     "Files": "Görseller",
-    "Please review relevant parameters": "Please review relevant parameters",
+    "Please review relevant parameters": "Lütfen ilgili parametreleri gözden geçirin",
     "Error loading. Please exit and reconfigure": "Yükleme sırasında sorun çıktı. Lütfen çıkıp yeniden yapılandırın",
     "Exit?": "Çıkılsın mı?",
     "Are you sure you want to exit?": "Çıkmak istediğinize emin misiniz?",
@@ -20,14 +20,14 @@
     "Photo": "Fotoğraf",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Bir Nextcloud hesabına mı gerek duyuyorsunuz? Sınırsız boyutlu Bulut Galerisi için buraya tıklayın",
     "Request for Cloud Gallery unlimited": "Sınırsız Cloud Gallery isteği ",
-    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks",
+    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Merhaba, Cloud Gallery üzerinde sınırsız depolama alanı kullanmak istiyorum. Teşekkürler.",
     "Nextcloud address must start with https:// or http://": "Nextcloud adresi https:// ya da http:// ile başlamalıdır",
-    "Insecure connection. Please configure your server to use HTTPS": "Insecure connection. Please configure your server to use HTTPS",
+    "Insecure connection. Please configure your server to use HTTPS": "Bağlantı güvenli değil. Lütfen sunucunuzu HTTPS kullanacak şekilde yapılandırın",
     "Checking for internet connection…": "İnternet bağlantısı denetleniyor…",
     "Checking connection…": "Bağlantı denetleniyor…",
     "Do you like Cloud Gallery?": "Cloud Gallery hoşunuza gitti mi?",
     "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!": "Cloud Gallery açık kaynaklı bir projedir ve geliştirme çalışmalarınızı hızlandırabilir. Cloud Gallery hoşunuza gittiyse bağış yapmayı düşünün. Teşekkürler!",
     "Donate": "Bağış Yapın",
-    "Close and discard": "Close and discard",
-    "Remember for later": "Remember for later"
+    "Close and discard": "Kapatıp Yoksay",
+    "Remember for later": "Sonra hatırla"
 }

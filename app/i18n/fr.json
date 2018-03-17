@@ -6,7 +6,7 @@
     "Share": "Partager",
     "Collections": "Albums",
     "Files": "Images",
-    "Please review relevant parameters": "Please review relevant parameters",
+    "Please review relevant parameters": "Veuillez vérifier les paramètres appropriés",
     "Error loading. Please exit and reconfigure": "Erreur de chargement. Merci de quitter et de reconfigurer",
     "Exit?": "Quitter ?",
     "Are you sure you want to exit?": "Êtes-vous sûr de vouloir quitter ?",
@@ -20,14 +20,14 @@
     "Photo": "Photo",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Avez vous besoin d'un compte Nextcloud ? Cliquez ici pour un espace de stockage illimité Cloud Gallery",
     "Request for Cloud Gallery unlimited": "Requête pour Cloud Gallery illimité",
-    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks",
+    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Bonjour, je suis intéressé pour obtenir un espace illimité pour Cloud Gallery. Merci",
     "Nextcloud address must start with https:// or http://": "L' adresse Nextcloud doit commencer avec https:// ou http://",
-    "Insecure connection. Please configure your server to use HTTPS": "Insecure connection. Please configure your server to use HTTPS",
+    "Insecure connection. Please configure your server to use HTTPS": "Connexion non sécurisée. Veuillez configurer votre serveur en HTTPS",
     "Checking for internet connection…": "Vérification de la connexion internet...",
     "Checking connection…": "Vérification de la connexion ...",
     "Do you like Cloud Gallery?": "Aimez-vous Cloud Gallery ?",
     "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!": "Cloud Gallery est un projet open-source et votre aide peut accélérer son développement. Si vous aimez Cloud Gallery veuillez faire une donation. Merci !",
     "Donate": "Donner",
-    "Close and discard": "Close and discard",
-    "Remember for later": "Remember for later"
+    "Close and discard": "Fermer et abandonner",
+    "Remember for later": "S'en rappeler pour plus tard"
 }

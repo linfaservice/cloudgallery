@@ -6,7 +6,7 @@
     "Share": "Deel",
     "Collections": "Verzamelingen",
     "Files": "Afbeeldingen",
-    "Please review relevant parameters": "Please review relevant parameters",
+    "Please review relevant parameters": "Beoordeel de relevante parameters",
     "Error loading. Please exit and reconfigure": "Fout bij laden. Aub afsluiten en herconfigureren",
     "Exit?": "Afsluiten?",
     "Are you sure you want to exit?": "Weet je zeker dat je wilt afsluiten?",
@@ -20,14 +20,14 @@
     "Photo": "Foto",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Heb je een Nextcloud account nodig? Klik hier voor ongelimiteerde ruimte voor Cloud Gallery",
     "Request for Cloud Gallery unlimited": "Aanvraag voor onbeperkte Cloud Gallery",
-    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks",
+    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Hallo, ik ben geïnteresseerd in onbeperkte ruimte voor Cloud Gallery. Bedankt",
     "Nextcloud address must start with https:// or http://": "Nextcloud adres moet beginnen met https:// of http://",
-    "Insecure connection. Please configure your server to use HTTPS": "Insecure connection. Please configure your server to use HTTPS",
+    "Insecure connection. Please configure your server to use HTTPS": "Onbeveiligde verbinding. Configureer je server voor gebruik HTTPS",
     "Checking for internet connection…": "Controleren van internet connectie...",
     "Checking connection…": "Controleren van connectie...",
     "Do you like Cloud Gallery?": "Vind je Cloud Gallery leuk?",
     "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!": "Cloud Gallery is een open source project en jouw hulp kan de ontwikkeling versnellen. Als je Cloud Gallery leuk vindt, overweeg dan een donatie. Bedankt!",
     "Donate": "Doneren",
-    "Close and discard": "Close and discard",
-    "Remember for later": "Remember for later"
+    "Close and discard": "Sluiten en negeren",
+    "Remember for later": "Onthouden voor later"
 }

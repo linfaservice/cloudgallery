@@ -6,7 +6,7 @@
     "Share": "Condividi",
     "Collections": "Album",
     "Files": "Immagini",
-    "Please review relevant parameters": "Please review relevant parameters",
+    "Please review relevant parameters": "Controlla i parametri relativi",
     "Error loading. Please exit and reconfigure": "Errore di connessione. Eseguire il logout e reinserire i parametri di configurazione",
     "Exit?": "Uscire?",
     "Are you sure you want to exit?": "Sei sicuro di voler uscire dall'app?",
@@ -20,14 +20,14 @@
     "Photo": "Foto",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Non hai ancora un account Nextcloud? Clicca qui per ottenere SPAZIO ILLIMITATO per Cloud Gallery",
     "Request for Cloud Gallery unlimited": "Richiesta account per Cloud Gallery",
-    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks",
+    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Salve, sono interessato a ottenere spazio illimitato per Cloud Gallery. Grazie",
     "Nextcloud address must start with https:// or http://": "L'indirizzo di Nextcloud deve iniziare con https:// o http://",
-    "Insecure connection. Please configure your server to use HTTPS": "Insecure connection. Please configure your server to use HTTPS",
+    "Insecure connection. Please configure your server to use HTTPS": "Connessione non sicura. Configura il tuo server per usare HTTPS",
     "Checking for internet connection…": "Controllo della connessione a Internet...",
     "Checking connection…": "Controllo della connessione in corso...",
     "Do you like Cloud Gallery?": "Ti piace Cloud Gallery?",
     "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!": "Cloud Gallery è un progetto open source e il tuo aiuto può contribuire ad accellerare lo sviluppo. Se ti piace Cloud Gallery considera la possibilità di offrire una donazione. Grazie!",
     "Donate": "Fai una donazione",
-    "Close and discard": "Close and discard",
-    "Remember for later": "Remember for later"
+    "Close and discard": "Chiudi e scarta",
+    "Remember for later": "Ricorda per dopo"
 }
