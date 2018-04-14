@@ -22,7 +22,7 @@
     "Request for Cloud Gallery unlimited": "Forespørsel om ubegrenset Skygalleri",
     "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Hei, jeg er interessert i ubegrenset plass for Skygalleri. Takk",
     "Nextcloud address must start with https:// or http://": "Nextcloud-adressen må starte med https:// eller http://",
-    "Insecure connection. Please configure your server to use HTTPS": "Insecure connection. Please configure your server to use HTTPS",
+    "Insecure connection. Please configure your server to use HTTPS": "Usikker tilkobling. Sett opp tjeneren din til å bruke HTTPS",
     "Checking for internet connection…": "Sjekker internettforbindelse…",
     "Checking connection…": "Sjekker tilkobling…",
     "Do you like Cloud Gallery?": "Liker du Skygalleri?",
