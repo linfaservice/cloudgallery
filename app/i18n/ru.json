@@ -6,7 +6,7 @@
     "Share": "Открыть доступ",
     "Collections": "Коллекции",
     "Files": "Изображения",
-    "Please review relevant parameters": "Please review relevant parameters",
+    "Please review relevant parameters": "Пожалуйста, проверьте правильность параметров",
     "Error loading. Please exit and reconfigure": "Ошибка загрузки, выйдите и перенастройте",
     "Exit?": "Выйти?",
     "Are you sure you want to exit?": "Действительно выйти?",
@@ -20,14 +20,14 @@
     "Photo": "Фото",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Нужна учётная запись Nextcloud? Нажмите здесь для получения неограниченного пространства для галереи Nextcloud",
     "Request for Cloud Gallery unlimited": "Запросить безлимитное пространство для Cloud Gallery",
-    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks",
+    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Здравствуйте! Я заинтересован в приобретении безлимитного пространства для Cloud Gallery. Спасибо.",
     "Nextcloud address must start with https:// or http://": "Адрес сервера Nextcloud должен начинаться с https:// или http://",
-    "Insecure connection. Please configure your server to use HTTPS": "Insecure connection. Please configure your server to use HTTPS",
+    "Insecure connection. Please configure your server to use HTTPS": "Используется небезопасное соединение, настройте сервер на использование протокола https",
     "Checking for internet connection…": "Проверка интернет-соединения…",
     "Checking connection…": "Проверка соединения…",
     "Do you like Cloud Gallery?": "Нравится Cloud Gallery?",
     "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!": "Cloud Gallery  — проект с открытым исходным кодом, который может развиваться быстрее благодаря вашей поддержке. Если вам нравится Cloud Gallery, то поддержите разработчиков пожертвованием.",
     "Donate": "Пожертвовать",
-    "Close and discard": "Close and discard",
-    "Remember for later": "Remember for later"
+    "Close and discard": "Закрыть и не сохранять",
+    "Remember for later": "Напомнить позже"
 }
