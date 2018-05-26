@@ -1,14 +1,14 @@
 {
-    "Loading albums…": "Nahrávám alba...",
-    "Loading images…": "Nahrávám obrázky...",
-    "Loading image…": "Nahrávám obrázek...",
+    "Loading albums…": "Nahrávání alb…",
+    "Loading images…": "Nahrávání obrázků…",
+    "Loading image…": "Nahrávání obrázku…",
     "Error loading. Please retry": "Chyba při načítání. Zkuste to prosím znovu",
     "Share": "Sdílet",
     "Collections": "Kolekce",
     "Files": "Obrázky",
-    "Please review relevant parameters": "Please review relevant parameters",
+    "Please review relevant parameters": "Zkontrolujte příslušné parametry",
     "Error loading. Please exit and reconfigure": "Chyba při načítání. Ukončete a nastavte znovu",
-    "Exit?": "Konec?",
+    "Exit?": "Ukončit?",
     "Are you sure you want to exit?": "Opravdu chcete ukončit?",
     "Yes": "Ano",
     "No": "Ne",
@@ -29,5 +29,5 @@
     "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!": "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!",
     "Donate": "Podpořit darem",
     "Close and discard": "Zavřít a zahodit",
-    "Remember for later": "Remember for later"
+    "Remember for later": "Zapamatovat pro příště"
 }
