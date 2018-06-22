@@ -22,12 +22,12 @@
     "Request for Cloud Gallery unlimited": "Korlátlan felhő galéria igénylése",
     "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks",
     "Nextcloud address must start with https:// or http://": "A Nextcloud cím http:///-el vagy https://-el kell kezdődjön",
-    "Insecure connection. Please configure your server to use HTTPS": "Insecure connection. Please configure your server to use HTTPS",
+    "Insecure connection. Please configure your server to use HTTPS": "Nem biztonságos kapcsolat. A kiszolgálót HTTPS használatára kell beállítani.",
     "Checking for internet connection…": "Internet kapcsolat ellenőrzése…",
     "Checking connection…": "Kapcsolat ellenőrzése…",
     "Do you like Cloud Gallery?": "Tetszik a Felhő Galéria?",
     "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!": "A Felhő Galéria egy nyílt forrású projekt és a segítséged meggyorsíthatja a fejlesztést. Ha tetszik a Felhő Galéria kérjük fontold meg a támogatást. Köszönjük!",
     "Donate": "Adományozás",
-    "Close and discard": "Close and discard",
+    "Close and discard": "Bezárás és elvetés",
     "Remember for later": "Remember for later"
 }
