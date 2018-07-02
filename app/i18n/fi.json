@@ -22,7 +22,7 @@
     "Request for Cloud Gallery unlimited": "Request for Cloud Gallery unlimited",
     "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks",
     "Nextcloud address must start with https:// or http://": "Nextcloudin osoite tulee alkaa protokollalla https:// tai http://",
-    "Insecure connection. Please configure your server to use HTTPS": "Insecure connection. Please configure your server to use HTTPS",
+    "Insecure connection. Please configure your server to use HTTPS": "Salaamaton yhteys. Määritä palvelin käyttämään HTTPS-yhteyttä",
     "Checking for internet connection…": "Tarkistetaan internetyhteyttä…",
     "Checking connection…": "Tarkistetaan yhteyttä…",
     "Do you like Cloud Gallery?": "Do you like Cloud Gallery?",
