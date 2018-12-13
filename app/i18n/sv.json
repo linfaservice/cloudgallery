@@ -6,7 +6,7 @@
     "Share": "Dela",
     "Collections": "Samlingar",
     "Files": "Bilder",
-    "Please review relevant parameters": "Please review relevant parameters",
+    "Please review relevant parameters": "Granska relevanta parametrar",
     "Error loading. Please exit and reconfigure": "Fel vid inläsning. Var god avsluta och omkonfigurera",
     "Exit?": "Avsluta?",
     "Are you sure you want to exit?": "Är du säker att du vill avsluta?",
@@ -20,14 +20,14 @@
     "Photo": "Bild",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Behöver du ett Nextcloud-konto? Klicka här för obegränsat utrymme för Bildgalleri i Molnet",
     "Request for Cloud Gallery unlimited": "Efterfråga obegränsat Cloud Gallery",
-    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks",
+    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Hej, jag är intresserad av att få obegränsat utrymme för Cloud Gallery. Tack",
     "Nextcloud address must start with https:// or http://": "Nextcloud-adress måste börja med https:// eller http://",
-    "Insecure connection. Please configure your server to use HTTPS": "Insecure connection. Please configure your server to use HTTPS",
+    "Insecure connection. Please configure your server to use HTTPS": "Osäker anslutning. Konfigurera din server för att använda HTTPS",
     "Checking for internet connection…": "Kontrollerar internetanslutning...",
     "Checking connection…": "Kontrollerar anslutning...",
     "Do you like Cloud Gallery?": "Gillar du Cloud Gallery?",
     "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!": "Cloud Gallery's källkod är helt öppen och din hjälp kan snabba på utvecklingen. Om du gillar Cloud Gallery, vänligen överväg en donation. Tack!",
     "Donate": "Donera",
-    "Close and discard": "Close and discard",
-    "Remember for later": "Remember for later"
+    "Close and discard": "Stäng och kassera",
+    "Remember for later": "Kom ihåg för senare"
 }
