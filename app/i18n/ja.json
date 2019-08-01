@@ -6,7 +6,7 @@
     "Share": "共有",
     "Collections": "コレクション",
     "Files": "画像",
-    "Please review relevant parameters": "Please review relevant parameters",
+    "Please review relevant parameters": "関連パラメータを確認してください",
     "Error loading. Please exit and reconfigure": "読み込み中にエラーが発生しました。終了して再設定してください。",
     "Exit?": "終了してよろしいですか?",
     "Are you sure you want to exit?": "本当に終了しますか?",
@@ -20,14 +20,14 @@
     "Photo": "写真",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Nextcloudアカウントが必要ですか？Cloud Galleryのためにここをクリックしてください。",
     "Request for Cloud Gallery unlimited": "無制限のCloud Galleryをリクエストする",
-    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks",
+    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "クラウドギャラリーの無制限スペースを確保したいのですが、よろしくお願いします。",
     "Nextcloud address must start with https:// or http://": "Nextcloudアドレスはhttps://またはhttp://で始まらなければいけません",
-    "Insecure connection. Please configure your server to use HTTPS": "Insecure connection. Please configure your server to use HTTPS",
+    "Insecure connection. Please configure your server to use HTTPS": "セキュリティ保護されていない接続です。HTTPSを使用するようにサーバーを構成してください",
     "Checking for internet connection…": "インターネットへの接続を確認中\n接続中...",
     "Checking connection…": "接続を確認中…",
     "Do you like Cloud Gallery?": "Cloud Galleryが気に入りましたか？",
     "Cloud Gallery is an open source project and your help can speed up development. If you like Cloud Gallery please consider to offer a donation. Thanks!": "Cloud Galleryは開発を加速させるオープンソースのプロジェクトです。もし、Cloud Galleryが気に入ったなら寄付をお願いします。",
     "Donate": "寄付",
     "Close and discard": "閉じて削除",
-    "Remember for later": "Remember for later"
+    "Remember for later": "忘れないでください。"
 }
