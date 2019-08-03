@@ -20,7 +20,7 @@
     "Photo": "写真",
     "Do you need a Nextcloud account? Click here for unlimited space for Cloud Gallery": "Nextcloudアカウントが必要ですか？Cloud Galleryのためにここをクリックしてください。",
     "Request for Cloud Gallery unlimited": "無制限のCloud Galleryをリクエストする",
-    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "クラウドギャラリーの無制限スペースを確保したいのですが、よろしくお願いします。",
+    "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Cloud Galleryの無制限スペースを確保したいのですが、よろしくお願いします。",
     "Nextcloud address must start with https:// or http://": "Nextcloudアドレスはhttps://またはhttp://で始まらなければいけません",
     "Insecure connection. Please configure your server to use HTTPS": "セキュリティ保護されていない接続です。HTTPSを使用するようにサーバーを構成してください",
     "Checking for internet connection…": "インターネットへの接続を確認中\n接続中...",
