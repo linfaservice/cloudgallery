@@ -22,7 +22,7 @@
     "Request for Cloud Gallery unlimited": "Anfrage für Cloud Gallery Unlimited",
     "Hello, I'm interested in obtaining unlimited space for Cloud Gallery. Thanks": "Hallo, ich bin interessiert an unbegrenztem Speicherplatz für Cloud Gallery. Danke",
     "Nextcloud address must start with https:// or http://": "Die Nextcloud-Adresse muss mit https:// oder http:// beginnen",
-    "Insecure connection. Please configure your server to use HTTPS": "Verbindung ist nicht sicher. Bitte Server auf HTTPS konfigurieren",
+    "Insecure connection. Please configure your server to use HTTPS": "Unsichere Verbindung. Bitte Server für HTTPS-Verwendung konfigurieren",
     "Checking for internet connection…": "Prüfe die Internetverbindung...",
     "Checking connection…": "Prüfe die Verbindung...",
     "Do you like Cloud Gallery?": "Mögen Sie Cloud Gallery?",
